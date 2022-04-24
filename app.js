@@ -25,6 +25,6 @@ db.once( 'open', () => {
 
 const task = cron.schedule('*/1 * * * *', async () => {
     writeAllPoolData()
-    console.log("Succ")
+    console.log("Suc")
 })
 task.start()
