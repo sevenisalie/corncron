@@ -24,9 +24,7 @@ db.once( 'open', () => {
 
 
 const task = cron.schedule('*/1 * * * *', async () => {
-    await writeAllPoolData()
-    console.log("")
-    const entry = await readLatestPoolData()
-    console.log(entry)
+    writeAllPoolData()
+    console.log("Succ")
 })
 task.start()
