@@ -519,21 +519,29 @@ const fetchTokenData = async (_token) => {
 }
 
 const fetchAllPoolApyData = async () => {
-    
-    const poolAPYPromises = pools.map( (pool) => {
-        if (pool.LP === true) {
-            const call = fetchLPData(pool.tokenStakeAddress)
-            return call
-        }
-        if (pool.LP !== true)  {
-            const call = fetchTokenData(pool.tokenStakeAddress)
-            return call
-        }
-    })
 
-    const data = await Promise.all(poolAPYPromises)
-   
-    return data
+    try {
+        const poolAPYPromises = pools.map( (pool) => {
+            if (pool.LP === true) {
+                const call = fetchLPData(pool.tokenStakeAddress)
+                return call
+            }
+            if (pool.LP !== true)  {
+                const call = fetchTokenData(pool.tokenStakeAddress)
+                return call
+            }
+        })
+    
+        const data = await Promise.all(poolAPYPromises)
+       
+        return data
+
+        
+    } catch (err) {
+        console.log(err)
+    }
+    
+
 }
 
 
