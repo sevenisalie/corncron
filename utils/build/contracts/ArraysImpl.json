@@ -1,0 +1,2621 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "array",
+          "type": "uint256[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "element",
+          "type": "uint256"
+        }
+      ],
+      "name": "findUpperBound",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "100": "contracts/openzeppelin/contracts/utils/Arrays.sol",
+    "25": "contracts/openzeppelin/contracts/math/Math.sol",
+    "30": "contracts/openzeppelin/contracts/mocks/ArraysImpl.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/openzeppelin/contracts/mocks/ArraysImpl.sol",
+    "exportedSymbols": {
+      "ArraysImpl": [
+        9326
+      ]
+    },
+    "id": 9327,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9293,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:30"
+      },
+      {
+        "absolutePath": "contracts/openzeppelin/contracts/utils/Arrays.sol",
+        "file": "../utils/Arrays.sol",
+        "id": 9294,
+        "nodeType": "ImportDirective",
+        "scope": 9327,
+        "sourceUnit": 17183,
+        "src": "25:29:30",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 9326,
+        "linearizedBaseContracts": [
+          9326
+        ],
+        "name": "ArraysImpl",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 9298,
+            "libraryName": {
+              "contractScope": null,
+              "id": 9295,
+              "name": "Arrays",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 17182,
+              "src": "88:6:30",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Arrays_$17182",
+                "typeString": "library Arrays"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "82:27:30",
+            "typeName": {
+              "baseType": {
+                "id": 9296,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "99:7:30",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 9297,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "99:9:30",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                "typeString": "uint256[]"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 9301,
+            "mutability": "mutable",
+            "name": "_array",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 9326,
+            "src": "115:24:30",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+              "typeString": "uint256[]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 9299,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "115:7:30",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 9300,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "115:9:30",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                "typeString": "uint256[]"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 9311,
+              "nodeType": "Block",
+              "src": "190:31:30",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 9309,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 9307,
+                      "name": "_array",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9301,
+                      "src": "200:6:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                        "typeString": "uint256[] storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 9308,
+                      "name": "array",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9304,
+                      "src": "209:5:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                        "typeString": "uint256[] memory"
+                      }
+                    },
+                    "src": "200:14:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                      "typeString": "uint256[] storage ref"
+                    }
+                  },
+                  "id": 9310,
+                  "nodeType": "ExpressionStatement",
+                  "src": "200:14:30"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 9312,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9305,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9304,
+                  "mutability": "mutable",
+                  "name": "array",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9312,
+                  "src": "159:22:30",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 9302,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "159:7:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 9303,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "159:9:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "158:24:30"
+            },
+            "returnParameters": {
+              "id": 9306,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "190:0:30"
+            },
+            "scope": 9326,
+            "src": "146:75:30",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9324,
+              "nodeType": "Block",
+              "src": "300:54:30",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 9321,
+                        "name": "element",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9314,
+                        "src": "339:7:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9319,
+                        "name": "_array",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9301,
+                        "src": "317:6:30",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                          "typeString": "uint256[] storage ref"
+                        }
+                      },
+                      "id": 9320,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "findUpperBound",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 17181,
+                      "src": "317:21:30",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_array$_t_uint256_$dyn_storage_ptr_$_t_uint256_$returns$_t_uint256_$bound_to$_t_array$_t_uint256_$dyn_storage_ptr_$",
+                        "typeString": "function (uint256[] storage pointer,uint256) view returns (uint256)"
+                      }
+                    },
+                    "id": 9322,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "317:30:30",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 9318,
+                  "id": 9323,
+                  "nodeType": "Return",
+                  "src": "310:37:30"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "33e3a58a",
+            "id": 9325,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "findUpperBound",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9315,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9314,
+                  "mutability": "mutable",
+                  "name": "element",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9325,
+                  "src": "251:15:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9313,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "251:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "250:17:30"
+            },
+            "returnParameters": {
+              "id": 9318,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9317,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9325,
+                  "src": "291:7:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9316,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "291:7:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "290:9:30"
+            },
+            "scope": 9326,
+            "src": "227:127:30",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 9327,
+        "src": "56:300:30"
+      }
+    ],
+    "src": "0:357:30"
+  },
+  "bytecode": "608060405234801561001057600080fd5b506040516102b73803806102b78339818101604052602081101561003357600080fd5b810190808051604051939291908464010000000082111561005357600080fd5b90830190602082018581111561006857600080fd5b825186602082028301116401000000008211171561008557600080fd5b82525081516020918201928201910280838360005b838110156100b257818101518382015260200161009a565b5050505091909101604052505082516100d492506000915060208401906100db565b505061013b565b828054828255906000526020600020908101928215610116579160200282015b828111156101165782518255916020019190600101906100fb565b50610122929150610126565b5090565b5b808211156101225760008155600101610127565b61016d8061014a6000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c806333e3a58a14610030575b600080fd5b61004d6004803603602081101561004657600080fd5b503561005f565b60408051918252519081900360200190f35b600061006b8183610071565b92915050565b81546000906100825750600061006b565b82546000905b808210156100d157600061009c8383610112565b9050848682815481106100ab57fe5b906000526020600020015411156100c4578091506100cb565b8060010192505b50610088565b6000821180156100f95750838560018403815481106100ec57fe5b9060005260206000200154145b1561010a575060001901905061006b565b509392505050565b6000600280830660028506018161012557fe5b0460028304600285040101939250505056fea2646970667358221220307f114e46e87de25d9bd285190b8d3ab090db30ac98b09c07d2ec32258ef29e64736f6c634300060c0033",
+  "bytecodeSha1": "8441ab6f63d2ff0006ec4f8a95b011201a99ea22",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "ArraysImpl",
+  "coverageMap": {
+    "branches": {
+      "100": {
+        "Arrays.findUpperBound": {
+          "7": [
+            1073,
+            1093,
+            false
+          ],
+          "8": [
+            1317,
+            1324,
+            false
+          ],
+          "9": [
+            1328,
+            1353,
+            false
+          ]
+        }
+      },
+      "25": {},
+      "30": {}
+    },
+    "statements": {
+      "100": {
+        "Arrays.findUpperBound": {
+          "1": [
+            694,
+            702
+          ],
+          "2": [
+            1113,
+            1123
+          ],
+          "3": [
+            1162,
+            1175
+          ],
+          "4": [
+            1369,
+            1383
+          ],
+          "5": [
+            1414,
+            1424
+          ]
+        }
+      },
+      "25": {
+        "Math.average": {
+          "6": [
+            710,
+            758
+          ]
+        }
+      },
+      "30": {
+        "ArraysImpl.findUpperBound": {
+          "0": [
+            310,
+            347
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [
+    "Arrays",
+    "Math"
+  ],
+  "deployedBytecode": "608060405234801561001057600080fd5b506004361061002b5760003560e01c806333e3a58a14610030575b600080fd5b61004d6004803603602081101561004657600080fd5b503561005f565b60408051918252519081900360200190f35b600061006b8183610071565b92915050565b81546000906100825750600061006b565b82546000905b808210156100d157600061009c8383610112565b9050848682815481106100ab57fe5b906000526020600020015411156100c4578091506100cb565b8060010192505b50610088565b6000821180156100f95750838560018403815481106100ec57fe5b9060005260206000200154145b1561010a575060001901905061006b565b509392505050565b6000600280830660028506018161012557fe5b0460028304600285040101939250505056fea2646970667358221220307f114e46e87de25d9bd285190b8d3ab090db30ac98b09c07d2ec32258ef29e64736f6c634300060c0033",
+  "deployedSourceMap": "56:300:30:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;227:127;;;;;;;;;;;;;;;;-1:-1:-1;227:127:30;;:::i;:::-;;;;;;;;;;;;;;;;;291:7;317:30;291:7;339;317:21;:30::i;:::-;310:37;227:127;-1:-1:-1;;227:127:30:o;549:892:100:-;661:12;;638:7;;657:56;;-1:-1:-1;701:1:100;694:8;;657:56;763:12;;723:11;;786:414;799:4;793:3;:10;786:414;;;819:11;833:23;846:3;851:4;833:12;:23::i;:::-;819:37;;1086:7;1073:5;1079:3;1073:10;;;;;;;;;;;;;;;;:20;1069:121;;;1120:3;1113:10;;1069:121;;;1168:3;1174:1;1168:7;1162:13;;1069:121;786:414;;;;1323:1;1317:3;:7;:36;;;;;1346:7;1328:5;1340:1;1334:3;:7;1328:14;;;;;;;;;;;;;;;;:25;1317:36;1313:122;;;-1:-1:-1;;;1376:7:100;;-1:-1:-1;1369:14:100;;1313:122;-1:-1:-1;1421:3:100;549:892;-1:-1:-1;;;549:892:100:o;575:190:25:-;637:7;756:1;;747;:5;743:1;739;:5;:13;738:19;;;;;;732:1;728;:5;722:1;718;:5;717:17;:41;;575:190;-1:-1:-1;;;575:190:25:o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    56,
+    356
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x2B JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x33E3A58A EQ PUSH2 0x30 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x4D PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0x46 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH2 0x5F JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x0 PUSH2 0x6B DUP2 DUP4 PUSH2 0x71 JUMP JUMPDEST SWAP3 SWAP2 POP POP JUMP JUMPDEST DUP2 SLOAD PUSH1 0x0 SWAP1 PUSH2 0x82 JUMPI POP PUSH1 0x0 PUSH2 0x6B JUMP JUMPDEST DUP3 SLOAD PUSH1 0x0 SWAP1 JUMPDEST DUP1 DUP3 LT ISZERO PUSH2 0xD1 JUMPI PUSH1 0x0 PUSH2 0x9C DUP4 DUP4 PUSH2 0x112 JUMP JUMPDEST SWAP1 POP DUP5 DUP7 DUP3 DUP2 SLOAD DUP2 LT PUSH2 0xAB JUMPI INVALID JUMPDEST SWAP1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 KECCAK256 ADD SLOAD GT ISZERO PUSH2 0xC4 JUMPI DUP1 SWAP2 POP PUSH2 0xCB JUMP JUMPDEST DUP1 PUSH1 0x1 ADD SWAP3 POP JUMPDEST POP PUSH2 0x88 JUMP JUMPDEST PUSH1 0x0 DUP3 GT DUP1 ISZERO PUSH2 0xF9 JUMPI POP DUP4 DUP6 PUSH1 0x1 DUP5 SUB DUP2 SLOAD DUP2 LT PUSH2 0xEC JUMPI INVALID JUMPDEST SWAP1 PUSH1 0x0 MSTORE PUSH1 0x20 PUSH1 0x0 KECCAK256 ADD SLOAD EQ JUMPDEST ISZERO PUSH2 0x10A JUMPI POP PUSH1 0x0 NOT ADD SWAP1 POP PUSH2 0x6B JUMP JUMPDEST POP SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 PUSH1 0x2 DUP1 DUP4 MOD PUSH1 0x2 DUP6 MOD ADD DUP2 PUSH2 0x125 JUMPI INVALID JUMPDEST DIV PUSH1 0x2 DUP4 DIV PUSH1 0x2 DUP6 DIV ADD ADD SWAP4 SWAP3 POP POP POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 ADDRESS PUSH32 0x114E46E87DE25D9BD285190B8D3AB090DB30AC98B09C07D2EC32258EF29E6473 PUSH16 0x6C634300060C00330000000000000000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        56,
+        356
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "MSTORE",
+      "path": "30"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "CALLVALUE",
+      "path": "30"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "DUP1",
+      "path": "30"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "ISZERO",
+      "path": "30"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "PUSH2",
+      "path": "30",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "JUMPI",
+      "path": "30"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "DUP1",
+      "path": "30"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "REVERT",
+      "path": "30"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "JUMPDEST",
+      "path": "30"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "POP",
+      "path": "30"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "CALLDATASIZE",
+      "path": "30"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "LT",
+      "path": "30"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "PUSH2",
+      "path": "30",
+      "value": "0x2B"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "JUMPI",
+      "path": "30"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "CALLDATALOAD",
+      "path": "30"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "SHR",
+      "path": "30"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "DUP1",
+      "path": "30"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "PUSH4",
+      "path": "30",
+      "value": "0x33E3A58A"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "EQ",
+      "path": "30"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "PUSH2",
+      "path": "30",
+      "value": "0x30"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "JUMPI",
+      "path": "30"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "JUMPDEST",
+      "path": "30"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0x0"
+    },
+    "46": {
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "DUP1",
+      "path": "30"
+    },
+    "47": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        56,
+        356
+      ],
+      "op": "REVERT",
+      "path": "30"
+    },
+    "48": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "JUMPDEST",
+      "path": "30"
+    },
+    "49": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "PUSH2",
+      "path": "30",
+      "value": "0x4D"
+    },
+    "52": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0x4"
+    },
+    "54": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "DUP1",
+      "path": "30"
+    },
+    "55": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "CALLDATASIZE",
+      "path": "30"
+    },
+    "56": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "SUB",
+      "path": "30"
+    },
+    "57": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0x20"
+    },
+    "59": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "DUP2",
+      "path": "30"
+    },
+    "60": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "LT",
+      "path": "30"
+    },
+    "61": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "ISZERO",
+      "path": "30"
+    },
+    "62": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "PUSH2",
+      "path": "30",
+      "value": "0x46"
+    },
+    "65": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "JUMPI",
+      "path": "30"
+    },
+    "66": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0x0"
+    },
+    "68": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "DUP1",
+      "path": "30"
+    },
+    "69": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "REVERT",
+      "path": "30"
+    },
+    "70": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "JUMPDEST",
+      "path": "30"
+    },
+    "71": {
+      "op": "POP"
+    },
+    "72": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "CALLDATALOAD",
+      "path": "30"
+    },
+    "73": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "PUSH2",
+      "path": "30",
+      "value": "0x5F"
+    },
+    "76": {
+      "fn": "ArraysImpl.findUpperBound",
+      "jump": "i",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "JUMP",
+      "path": "30"
+    },
+    "77": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "JUMPDEST",
+      "path": "30"
+    },
+    "78": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0x40"
+    },
+    "80": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "DUP1",
+      "path": "30"
+    },
+    "81": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "MLOAD",
+      "path": "30"
+    },
+    "82": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "SWAP2",
+      "path": "30"
+    },
+    "83": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "DUP3",
+      "path": "30"
+    },
+    "84": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "MSTORE",
+      "path": "30"
+    },
+    "85": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "MLOAD",
+      "path": "30"
+    },
+    "86": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "SWAP1",
+      "path": "30"
+    },
+    "87": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "DUP2",
+      "path": "30"
+    },
+    "88": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "SWAP1",
+      "path": "30"
+    },
+    "89": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "SUB",
+      "path": "30"
+    },
+    "90": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0x20"
+    },
+    "92": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "ADD",
+      "path": "30"
+    },
+    "93": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "SWAP1",
+      "path": "30"
+    },
+    "94": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "RETURN",
+      "path": "30"
+    },
+    "95": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "JUMPDEST",
+      "path": "30"
+    },
+    "96": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        291,
+        298
+      ],
+      "op": "PUSH1",
+      "path": "30",
+      "value": "0x0"
+    },
+    "98": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        317,
+        347
+      ],
+      "op": "PUSH2",
+      "path": "30",
+      "statement": 0,
+      "value": "0x6B"
+    },
+    "101": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        291,
+        298
+      ],
+      "op": "DUP2",
+      "path": "30"
+    },
+    "102": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        339,
+        346
+      ],
+      "op": "DUP4",
+      "path": "30"
+    },
+    "103": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        317,
+        338
+      ],
+      "op": "PUSH2",
+      "path": "30",
+      "value": "0x71"
+    },
+    "106": {
+      "fn": "ArraysImpl.findUpperBound",
+      "jump": "i",
+      "offset": [
+        317,
+        347
+      ],
+      "op": "JUMP",
+      "path": "30"
+    },
+    "107": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        317,
+        347
+      ],
+      "op": "JUMPDEST",
+      "path": "30"
+    },
+    "108": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        310,
+        347
+      ],
+      "op": "SWAP3",
+      "path": "30"
+    },
+    "109": {
+      "fn": "ArraysImpl.findUpperBound",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "SWAP2",
+      "path": "30"
+    },
+    "110": {
+      "op": "POP"
+    },
+    "111": {
+      "op": "POP"
+    },
+    "112": {
+      "fn": "ArraysImpl.findUpperBound",
+      "jump": "o",
+      "offset": [
+        227,
+        354
+      ],
+      "op": "JUMP",
+      "path": "30"
+    },
+    "113": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        549,
+        1441
+      ],
+      "op": "JUMPDEST",
+      "path": "100"
+    },
+    "114": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        661,
+        673
+      ],
+      "op": "DUP2",
+      "path": "100"
+    },
+    "115": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        661,
+        673
+      ],
+      "op": "SLOAD",
+      "path": "100"
+    },
+    "116": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        638,
+        645
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "value": "0x0"
+    },
+    "118": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        638,
+        645
+      ],
+      "op": "SWAP1",
+      "path": "100"
+    },
+    "119": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        657,
+        713
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0x82"
+    },
+    "122": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        657,
+        713
+      ],
+      "op": "JUMPI",
+      "path": "100"
+    },
+    "123": {
+      "op": "POP"
+    },
+    "124": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        701,
+        702
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "statement": 1,
+      "value": "0x0"
+    },
+    "126": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        694,
+        702
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0x6B"
+    },
+    "129": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        694,
+        702
+      ],
+      "op": "JUMP",
+      "path": "100"
+    },
+    "130": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        657,
+        713
+      ],
+      "op": "JUMPDEST",
+      "path": "100"
+    },
+    "131": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        763,
+        775
+      ],
+      "op": "DUP3",
+      "path": "100"
+    },
+    "132": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        763,
+        775
+      ],
+      "op": "SLOAD",
+      "path": "100"
+    },
+    "133": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        723,
+        734
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "value": "0x0"
+    },
+    "135": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        723,
+        734
+      ],
+      "op": "SWAP1",
+      "path": "100"
+    },
+    "136": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        786,
+        1200
+      ],
+      "op": "JUMPDEST",
+      "path": "100"
+    },
+    "137": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        799,
+        803
+      ],
+      "op": "DUP1",
+      "path": "100"
+    },
+    "138": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        793,
+        796
+      ],
+      "op": "DUP3",
+      "path": "100"
+    },
+    "139": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        793,
+        803
+      ],
+      "op": "LT",
+      "path": "100"
+    },
+    "140": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        786,
+        1200
+      ],
+      "op": "ISZERO",
+      "path": "100"
+    },
+    "141": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        786,
+        1200
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0xD1"
+    },
+    "144": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        786,
+        1200
+      ],
+      "op": "JUMPI",
+      "path": "100"
+    },
+    "145": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        819,
+        830
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "value": "0x0"
+    },
+    "147": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        833,
+        856
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0x9C"
+    },
+    "150": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        846,
+        849
+      ],
+      "op": "DUP4",
+      "path": "100"
+    },
+    "151": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        851,
+        855
+      ],
+      "op": "DUP4",
+      "path": "100"
+    },
+    "152": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        833,
+        845
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0x112"
+    },
+    "155": {
+      "fn": "Arrays.findUpperBound",
+      "jump": "i",
+      "offset": [
+        833,
+        856
+      ],
+      "op": "JUMP",
+      "path": "100"
+    },
+    "156": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        833,
+        856
+      ],
+      "op": "JUMPDEST",
+      "path": "100"
+    },
+    "157": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        819,
+        856
+      ],
+      "op": "SWAP1",
+      "path": "100"
+    },
+    "158": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        819,
+        856
+      ],
+      "op": "POP",
+      "path": "100"
+    },
+    "159": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1086,
+        1093
+      ],
+      "op": "DUP5",
+      "path": "100"
+    },
+    "160": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1078
+      ],
+      "op": "DUP7",
+      "path": "100"
+    },
+    "161": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1079,
+        1082
+      ],
+      "op": "DUP3",
+      "path": "100"
+    },
+    "162": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "DUP2",
+      "path": "100"
+    },
+    "163": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "SLOAD",
+      "path": "100"
+    },
+    "164": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "DUP2",
+      "path": "100"
+    },
+    "165": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "LT",
+      "path": "100"
+    },
+    "166": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0xAB"
+    },
+    "169": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "JUMPI",
+      "path": "100"
+    },
+    "170": {
+      "dev": "Index out of range",
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "INVALID",
+      "path": "100"
+    },
+    "171": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "JUMPDEST",
+      "path": "100"
+    },
+    "172": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "SWAP1",
+      "path": "100"
+    },
+    "173": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "value": "0x0"
+    },
+    "175": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "MSTORE",
+      "path": "100"
+    },
+    "176": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "value": "0x20"
+    },
+    "178": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "value": "0x0"
+    },
+    "180": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "KECCAK256",
+      "path": "100"
+    },
+    "181": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "ADD",
+      "path": "100"
+    },
+    "182": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1083
+      ],
+      "op": "SLOAD",
+      "path": "100"
+    },
+    "183": {
+      "branch": 7,
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1073,
+        1093
+      ],
+      "op": "GT",
+      "path": "100"
+    },
+    "184": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1069,
+        1190
+      ],
+      "op": "ISZERO",
+      "path": "100"
+    },
+    "185": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1069,
+        1190
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0xC4"
+    },
+    "188": {
+      "branch": 7,
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1069,
+        1190
+      ],
+      "op": "JUMPI",
+      "path": "100"
+    },
+    "189": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1120,
+        1123
+      ],
+      "op": "DUP1",
+      "path": "100",
+      "statement": 2
+    },
+    "190": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1113,
+        1123
+      ],
+      "op": "SWAP2",
+      "path": "100"
+    },
+    "191": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1113,
+        1123
+      ],
+      "op": "POP",
+      "path": "100"
+    },
+    "192": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1069,
+        1190
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0xCB"
+    },
+    "195": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1069,
+        1190
+      ],
+      "op": "JUMP",
+      "path": "100"
+    },
+    "196": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1069,
+        1190
+      ],
+      "op": "JUMPDEST",
+      "path": "100"
+    },
+    "197": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1168,
+        1171
+      ],
+      "op": "DUP1",
+      "path": "100",
+      "statement": 3
+    },
+    "198": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1174,
+        1175
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "value": "0x1"
+    },
+    "200": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1168,
+        1175
+      ],
+      "op": "ADD",
+      "path": "100"
+    },
+    "201": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1162,
+        1175
+      ],
+      "op": "SWAP3",
+      "path": "100"
+    },
+    "202": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1162,
+        1175
+      ],
+      "op": "POP",
+      "path": "100"
+    },
+    "203": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1069,
+        1190
+      ],
+      "op": "JUMPDEST",
+      "path": "100"
+    },
+    "204": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        786,
+        1200
+      ],
+      "op": "POP",
+      "path": "100"
+    },
+    "205": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        786,
+        1200
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0x88"
+    },
+    "208": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        786,
+        1200
+      ],
+      "op": "JUMP",
+      "path": "100"
+    },
+    "209": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        786,
+        1200
+      ],
+      "op": "JUMPDEST",
+      "path": "100"
+    },
+    "210": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1323,
+        1324
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "value": "0x0"
+    },
+    "212": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1317,
+        1320
+      ],
+      "op": "DUP3",
+      "path": "100"
+    },
+    "213": {
+      "branch": 8,
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1317,
+        1324
+      ],
+      "op": "GT",
+      "path": "100"
+    },
+    "214": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1317,
+        1353
+      ],
+      "op": "DUP1",
+      "path": "100"
+    },
+    "215": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1317,
+        1353
+      ],
+      "op": "ISZERO",
+      "path": "100"
+    },
+    "216": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1317,
+        1353
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0xF9"
+    },
+    "219": {
+      "branch": 8,
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1317,
+        1353
+      ],
+      "op": "JUMPI",
+      "path": "100"
+    },
+    "220": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1317,
+        1353
+      ],
+      "op": "POP",
+      "path": "100"
+    },
+    "221": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1346,
+        1353
+      ],
+      "op": "DUP4",
+      "path": "100"
+    },
+    "222": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1333
+      ],
+      "op": "DUP6",
+      "path": "100"
+    },
+    "223": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1340,
+        1341
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "value": "0x1"
+    },
+    "225": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1334,
+        1337
+      ],
+      "op": "DUP5",
+      "path": "100"
+    },
+    "226": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1334,
+        1341
+      ],
+      "op": "SUB",
+      "path": "100"
+    },
+    "227": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "DUP2",
+      "path": "100"
+    },
+    "228": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "SLOAD",
+      "path": "100"
+    },
+    "229": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "DUP2",
+      "path": "100"
+    },
+    "230": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "LT",
+      "path": "100"
+    },
+    "231": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0xEC"
+    },
+    "234": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "JUMPI",
+      "path": "100"
+    },
+    "235": {
+      "dev": "Index out of range",
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "INVALID",
+      "path": "100"
+    },
+    "236": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "JUMPDEST",
+      "path": "100"
+    },
+    "237": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "SWAP1",
+      "path": "100"
+    },
+    "238": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "value": "0x0"
+    },
+    "240": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "MSTORE",
+      "path": "100"
+    },
+    "241": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "value": "0x20"
+    },
+    "243": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "PUSH1",
+      "path": "100",
+      "value": "0x0"
+    },
+    "245": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "KECCAK256",
+      "path": "100"
+    },
+    "246": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "ADD",
+      "path": "100"
+    },
+    "247": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1342
+      ],
+      "op": "SLOAD",
+      "path": "100"
+    },
+    "248": {
+      "branch": 9,
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1328,
+        1353
+      ],
+      "op": "EQ",
+      "path": "100"
+    },
+    "249": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1317,
+        1353
+      ],
+      "op": "JUMPDEST",
+      "path": "100"
+    },
+    "250": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1313,
+        1435
+      ],
+      "op": "ISZERO",
+      "path": "100"
+    },
+    "251": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1313,
+        1435
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0x10A"
+    },
+    "254": {
+      "branch": 9,
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1313,
+        1435
+      ],
+      "op": "JUMPI",
+      "path": "100"
+    },
+    "255": {
+      "op": "POP"
+    },
+    "256": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "258": {
+      "op": "NOT"
+    },
+    "259": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1376,
+        1383
+      ],
+      "op": "ADD",
+      "path": "100",
+      "statement": 4
+    },
+    "260": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1376,
+        1383
+      ],
+      "op": "SWAP1",
+      "path": "100"
+    },
+    "261": {
+      "op": "POP"
+    },
+    "262": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1369,
+        1383
+      ],
+      "op": "PUSH2",
+      "path": "100",
+      "value": "0x6B"
+    },
+    "265": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1369,
+        1383
+      ],
+      "op": "JUMP",
+      "path": "100"
+    },
+    "266": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1313,
+        1435
+      ],
+      "op": "JUMPDEST",
+      "path": "100"
+    },
+    "267": {
+      "op": "POP"
+    },
+    "268": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        1421,
+        1424
+      ],
+      "op": "SWAP4",
+      "path": "100",
+      "statement": 5
+    },
+    "269": {
+      "fn": "Arrays.findUpperBound",
+      "offset": [
+        549,
+        1441
+      ],
+      "op": "SWAP3",
+      "path": "100"
+    },
+    "270": {
+      "op": "POP"
+    },
+    "271": {
+      "op": "POP"
+    },
+    "272": {
+      "op": "POP"
+    },
+    "273": {
+      "fn": "Arrays.findUpperBound",
+      "jump": "o",
+      "offset": [
+        549,
+        1441
+      ],
+      "op": "JUMP",
+      "path": "100"
+    },
+    "274": {
+      "fn": "Math.average",
+      "offset": [
+        575,
+        765
+      ],
+      "op": "JUMPDEST",
+      "path": "25"
+    },
+    "275": {
+      "fn": "Math.average",
+      "offset": [
+        637,
+        644
+      ],
+      "op": "PUSH1",
+      "path": "25",
+      "value": "0x0"
+    },
+    "277": {
+      "fn": "Math.average",
+      "offset": [
+        756,
+        757
+      ],
+      "op": "PUSH1",
+      "path": "25",
+      "statement": 6,
+      "value": "0x2"
+    },
+    "279": {
+      "fn": "Math.average",
+      "offset": [
+        756,
+        757
+      ],
+      "op": "DUP1",
+      "path": "25"
+    },
+    "280": {
+      "fn": "Math.average",
+      "offset": [
+        747,
+        748
+      ],
+      "op": "DUP4",
+      "path": "25"
+    },
+    "281": {
+      "fn": "Math.average",
+      "offset": [
+        747,
+        752
+      ],
+      "op": "MOD",
+      "path": "25"
+    },
+    "282": {
+      "fn": "Math.average",
+      "offset": [
+        743,
+        744
+      ],
+      "op": "PUSH1",
+      "path": "25",
+      "value": "0x2"
+    },
+    "284": {
+      "fn": "Math.average",
+      "offset": [
+        739,
+        740
+      ],
+      "op": "DUP6",
+      "path": "25"
+    },
+    "285": {
+      "fn": "Math.average",
+      "offset": [
+        739,
+        744
+      ],
+      "op": "MOD",
+      "path": "25"
+    },
+    "286": {
+      "fn": "Math.average",
+      "offset": [
+        739,
+        752
+      ],
+      "op": "ADD",
+      "path": "25"
+    },
+    "287": {
+      "fn": "Math.average",
+      "offset": [
+        738,
+        757
+      ],
+      "op": "DUP2",
+      "path": "25"
+    },
+    "288": {
+      "fn": "Math.average",
+      "offset": [
+        738,
+        757
+      ],
+      "op": "PUSH2",
+      "path": "25",
+      "value": "0x125"
+    },
+    "291": {
+      "fn": "Math.average",
+      "offset": [
+        738,
+        757
+      ],
+      "op": "JUMPI",
+      "path": "25"
+    },
+    "292": {
+      "dev": "Division by zero",
+      "fn": "Math.average",
+      "offset": [
+        738,
+        757
+      ],
+      "op": "INVALID",
+      "path": "25"
+    },
+    "293": {
+      "fn": "Math.average",
+      "offset": [
+        738,
+        757
+      ],
+      "op": "JUMPDEST",
+      "path": "25"
+    },
+    "294": {
+      "fn": "Math.average",
+      "offset": [
+        738,
+        757
+      ],
+      "op": "DIV",
+      "path": "25"
+    },
+    "295": {
+      "fn": "Math.average",
+      "offset": [
+        732,
+        733
+      ],
+      "op": "PUSH1",
+      "path": "25",
+      "value": "0x2"
+    },
+    "297": {
+      "fn": "Math.average",
+      "offset": [
+        728,
+        729
+      ],
+      "op": "DUP4",
+      "path": "25"
+    },
+    "298": {
+      "fn": "Math.average",
+      "offset": [
+        728,
+        733
+      ],
+      "op": "DIV",
+      "path": "25"
+    },
+    "299": {
+      "fn": "Math.average",
+      "offset": [
+        722,
+        723
+      ],
+      "op": "PUSH1",
+      "path": "25",
+      "value": "0x2"
+    },
+    "301": {
+      "fn": "Math.average",
+      "offset": [
+        718,
+        719
+      ],
+      "op": "DUP6",
+      "path": "25"
+    },
+    "302": {
+      "fn": "Math.average",
+      "offset": [
+        718,
+        723
+      ],
+      "op": "DIV",
+      "path": "25"
+    },
+    "303": {
+      "fn": "Math.average",
+      "offset": [
+        717,
+        734
+      ],
+      "op": "ADD",
+      "path": "25"
+    },
+    "304": {
+      "fn": "Math.average",
+      "offset": [
+        717,
+        758
+      ],
+      "op": "ADD",
+      "path": "25"
+    },
+    "305": {
+      "fn": "Math.average",
+      "offset": [
+        717,
+        758
+      ],
+      "op": "SWAP4",
+      "path": "25"
+    },
+    "306": {
+      "fn": "Math.average",
+      "offset": [
+        575,
+        765
+      ],
+      "op": "SWAP3",
+      "path": "25"
+    },
+    "307": {
+      "op": "POP"
+    },
+    "308": {
+      "op": "POP"
+    },
+    "309": {
+      "op": "POP"
+    },
+    "310": {
+      "fn": "Math.average",
+      "jump": "o",
+      "offset": [
+        575,
+        765
+      ],
+      "op": "JUMP",
+      "path": "25"
+    }
+  },
+  "sha1": "07ad488cf98979b1b2cfec9b6e83eee38e6742d2",
+  "source": "pragma solidity ^0.6.0;\n\nimport \"../utils/Arrays.sol\";\n\ncontract ArraysImpl {\n    using Arrays for uint256[];\n\n    uint256[] private _array;\n\n    constructor (uint256[] memory array) public {\n        _array = array;\n    }\n\n    function findUpperBound(uint256 element) external view returns (uint256) {\n        return _array.findUpperBound(element);\n    }\n}\n",
+  "sourceMap": "56:300:30:-:0;;;146:75;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;146:75:30;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;146:75:30;;;;;;-1:-1:-1;;200:14:30;;;;-1:-1:-1;200:6:30;;-1:-1:-1;200:14:30;;;;;:::i;:::-;;146:75;56:300;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;56:300:30;;;-1:-1:-1;56:300:30;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;",
+  "sourcePath": "contracts/openzeppelin/contracts/mocks/ArraysImpl.sol",
+  "type": "contract"
+}

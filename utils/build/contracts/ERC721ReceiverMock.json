@@ -1,0 +1,4673 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "retval",
+          "type": "bytes4"
+        },
+        {
+          "internalType": "bool",
+          "name": "reverts",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "gas",
+          "type": "uint256"
+        }
+      ],
+      "name": "Received",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "operator",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "onERC721Received",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "51": "contracts/openzeppelin/contracts/mocks/ERC721ReceiverMock.sol",
+    "94": "contracts/openzeppelin/contracts/token/ERC721/IERC721Receiver.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/openzeppelin/contracts/mocks/ERC721ReceiverMock.sol",
+    "exportedSymbols": {
+      "ERC721ReceiverMock": [
+        10408
+      ]
+    },
+    "id": 10409,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 10340,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:51"
+      },
+      {
+        "absolutePath": "contracts/openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+        "file": "../token/ERC721/IERC721Receiver.sol",
+        "id": 10341,
+        "nodeType": "ImportDirective",
+        "scope": 10409,
+        "sourceUnit": 15746,
+        "src": "25:45:51",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 10342,
+              "name": "IERC721Receiver",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 15745,
+              "src": "103:15:51",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IERC721Receiver_$15745",
+                "typeString": "contract IERC721Receiver"
+              }
+            },
+            "id": 10343,
+            "nodeType": "InheritanceSpecifier",
+            "src": "103:15:51"
+          }
+        ],
+        "contractDependencies": [
+          15745
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 10408,
+        "linearizedBaseContracts": [
+          10408,
+          15745
+        ],
+        "name": "ERC721ReceiverMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 10345,
+            "mutability": "mutable",
+            "name": "_retval",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10408,
+            "src": "125:22:51",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 10344,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "125:6:51",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "constant": false,
+            "id": 10347,
+            "mutability": "mutable",
+            "name": "_reverts",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 10408,
+            "src": "153:21:51",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 10346,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "153:4:51",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 10359,
+            "name": "Received",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 10358,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10349,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10359,
+                  "src": "196:16:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10348,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "196:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10351,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10359,
+                  "src": "214:12:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10350,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "214:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10353,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10359,
+                  "src": "228:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10352,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "228:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10355,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10359,
+                  "src": "245:10:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10354,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "245:5:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10357,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "gas",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10359,
+                  "src": "257:11:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10356,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "257:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "195:74:51"
+            },
+            "src": "181:89:51"
+          },
+          {
+            "body": {
+              "id": 10374,
+              "nodeType": "Block",
+              "src": "325:61:51",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10368,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10366,
+                      "name": "_retval",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10345,
+                      "src": "335:7:51",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10367,
+                      "name": "retval",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10361,
+                      "src": "345:6:51",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      }
+                    },
+                    "src": "335:16:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "id": 10369,
+                  "nodeType": "ExpressionStatement",
+                  "src": "335:16:51"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10372,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 10370,
+                      "name": "_reverts",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10347,
+                      "src": "361:8:51",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 10371,
+                      "name": "reverts",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10363,
+                      "src": "372:7:51",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "361:18:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 10373,
+                  "nodeType": "ExpressionStatement",
+                  "src": "361:18:51"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 10375,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 10364,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10361,
+                  "mutability": "mutable",
+                  "name": "retval",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10375,
+                  "src": "289:13:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 10360,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "289:6:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10363,
+                  "mutability": "mutable",
+                  "name": "reverts",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10375,
+                  "src": "304:12:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 10362,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "304:4:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "288:29:51"
+            },
+            "returnParameters": {
+              "id": 10365,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "325:0:51"
+            },
+            "scope": 10408,
+            "src": "276:110:51",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "baseFunctions": [
+              15744
+            ],
+            "body": {
+              "id": 10406,
+              "nodeType": "Block",
+              "src": "531:157:51",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 10391,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "UnaryOperation",
+                        "operator": "!",
+                        "prefix": true,
+                        "src": "549:9:51",
+                        "subExpression": {
+                          "argumentTypes": null,
+                          "id": 10390,
+                          "name": "_reverts",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 10347,
+                          "src": "550:8:51",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "45524337323152656365697665724d6f636b3a20726576657274696e67",
+                        "id": 10392,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "560:31:51",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_0dbe0f4c3249a8de74f224ef53fef2e300747c9f34527e99ce6490bf6e04eb76",
+                          "typeString": "literal_string \"ERC721ReceiverMock: reverting\""
+                        },
+                        "value": "ERC721ReceiverMock: reverting"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        {
+                          "typeIdentifier": "t_stringliteral_0dbe0f4c3249a8de74f224ef53fef2e300747c9f34527e99ce6490bf6e04eb76",
+                          "typeString": "literal_string \"ERC721ReceiverMock: reverting\""
+                        }
+                      ],
+                      "id": 10389,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        -18,
+                        -18
+                      ],
+                      "referencedDeclaration": -18,
+                      "src": "541:7:51",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (bool,string memory) pure"
+                      }
+                    },
+                    "id": 10393,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "541:51:51",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10394,
+                  "nodeType": "ExpressionStatement",
+                  "src": "541:51:51"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 10396,
+                        "name": "operator",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10377,
+                        "src": "616:8:51",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10397,
+                        "name": "from",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10379,
+                        "src": "626:4:51",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10398,
+                        "name": "tokenId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10381,
+                        "src": "632:7:51",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 10399,
+                        "name": "data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 10383,
+                        "src": "641:4:51",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 10400,
+                          "name": "gasleft",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -7,
+                          "src": "647:7:51",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_gasleft_view$__$returns$_t_uint256_$",
+                            "typeString": "function () view returns (uint256)"
+                          }
+                        },
+                        "id": 10401,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "647:9:51",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 10395,
+                      "name": "Received",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 10359,
+                      "src": "607:8:51",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_bytes_memory_ptr_$_t_uint256_$returns$__$",
+                        "typeString": "function (address,address,uint256,bytes memory,uint256)"
+                      }
+                    },
+                    "id": 10402,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "607:50:51",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 10403,
+                  "nodeType": "EmitStatement",
+                  "src": "602:55:51"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 10404,
+                    "name": "_retval",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 10345,
+                    "src": "674:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "functionReturnParameters": 10388,
+                  "id": 10405,
+                  "nodeType": "Return",
+                  "src": "667:14:51"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "150b7a02",
+            "id": 10407,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "onERC721Received",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 10385,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "501:8:51"
+            },
+            "parameters": {
+              "id": 10384,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10377,
+                  "mutability": "mutable",
+                  "name": "operator",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10407,
+                  "src": "418:16:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10376,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "418:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10379,
+                  "mutability": "mutable",
+                  "name": "from",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10407,
+                  "src": "436:12:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10378,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "436:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10381,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10407,
+                  "src": "450:15:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 10380,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "450:7:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 10383,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10407,
+                  "src": "467:17:51",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 10382,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "467:5:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "417:68:51"
+            },
+            "returnParameters": {
+              "id": 10388,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10387,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 10407,
+                  "src": "519:6:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 10386,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "519:6:51",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "518:8:51"
+            },
+            "scope": 10408,
+            "src": "392:296:51",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 10409,
+        "src": "72:618:51"
+      }
+    ],
+    "src": "0:691:51"
+  },
+  "bytecode": "608060405234801561001057600080fd5b506040516102fd3803806102fd8339818101604052604081101561003357600080fd5b508051602090910151600080549115156401000000000260ff60201b1960e09490941c63ffffffff199093169290921792909216179055610284806100796000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063150b7a0214610030575b600080fd5b6100f66004803603608081101561004657600080fd5b6001600160a01b0382358116926020810135909116916040820135919081019060808101606082013564010000000081111561008157600080fd5b82018360208201111561009357600080fd5b803590602001918460018302840111640100000000831117156100b557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610113945050505050565b604080516001600160e01b03199092168252519081900360200190f35b60008054640100000000900460ff1615610174576040805162461bcd60e51b815260206004820152601d60248201527f45524337323152656365697665724d6f636b3a20726576657274696e67000000604482015290519081900360640190fd5b7f28fa6e16458f9c24aa59ddd4085264573006dbe30304837873c7deafc702b038858585855a60405180866001600160a01b03168152602001856001600160a01b0316815260200184815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156102015781810151838201526020016101e9565b50505050905090810190601f16801561022e5780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390a15060005460e01b94935050505056fea26469706673582212206a600eedfec4a203dcb4e7210af376e4b81357a211b9b9db6453ca285d23a81164736f6c634300060c0033",
+  "bytecodeSha1": "5cd3ea29085220b17d40c4a626157adbca11d3a4",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "ERC721ReceiverMock",
+  "coverageMap": {
+    "branches": {
+      "51": {
+        "ERC721ReceiverMock.onERC721Received": {
+          "3": [
+            549,
+            558,
+            true
+          ]
+        }
+      },
+      "94": {}
+    },
+    "statements": {
+      "51": {
+        "ERC721ReceiverMock.onERC721Received": {
+          "0": [
+            541,
+            592
+          ],
+          "1": [
+            602,
+            657
+          ],
+          "2": [
+            667,
+            681
+          ]
+        }
+      },
+      "94": {}
+    }
+  },
+  "dependencies": [
+    "IERC721Receiver"
+  ],
+  "deployedBytecode": "608060405234801561001057600080fd5b506004361061002b5760003560e01c8063150b7a0214610030575b600080fd5b6100f66004803603608081101561004657600080fd5b6001600160a01b0382358116926020810135909116916040820135919081019060808101606082013564010000000081111561008157600080fd5b82018360208201111561009357600080fd5b803590602001918460018302840111640100000000831117156100b557600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250929550610113945050505050565b604080516001600160e01b03199092168252519081900360200190f35b60008054640100000000900460ff1615610174576040805162461bcd60e51b815260206004820152601d60248201527f45524337323152656365697665724d6f636b3a20726576657274696e67000000604482015290519081900360640190fd5b7f28fa6e16458f9c24aa59ddd4085264573006dbe30304837873c7deafc702b038858585855a60405180866001600160a01b03168152602001856001600160a01b0316815260200184815260200180602001838152602001828103825284818151815260200191508051906020019080838360005b838110156102015781810151838201526020016101e9565b50505050905090810190601f16801561022e5780820380516001836020036101000a031916815260200191505b50965050505050505060405180910390a15060005460e01b94935050505056fea26469706673582212206a600eedfec4a203dcb4e7210af376e4b81357a211b9b9db6453ca285d23a81164736f6c634300060c0033",
+  "deployedSourceMap": "72:618:51:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;392:296;;;;;;;;;;;;;;;;-1:-1:-1;;;;;392:296:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;392:296:51;;-1:-1:-1;392:296:51;;-1:-1:-1;;;;;392:296:51:i;:::-;;;;-1:-1:-1;;;;;;392:296:51;;;;;;;;;;;;;;;519:6;550:8;;;;;;;549:9;541:51;;;;;-1:-1:-1;;;541:51:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;607:50;616:8;626:4;632:7;641:4;647:9;607:50;;;;-1:-1:-1;;;;;607:50:51;;;;;;-1:-1:-1;;;;;607:50:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;674:7:51;;;;392:296;;;;;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {
+      "onERC721Received(address,address,uint256,bytes)": {
+        "details": "The ERC721 smart contract calls this function on the recipient after a {IERC721-safeTransferFrom}. This function MUST return the function selector, otherwise the caller will revert the transaction. The selector to be returned can be obtained as `this.onERC721Received.selector`. This function MAY throw to revert and reject the transfer. Note: the ERC721 contract address is always the message sender.",
+        "notice": "Handle the receipt of an NFT",
+        "params": {
+          "data": "Additional data with no specified format",
+          "from": "The address which previously owned the token",
+          "operator": "The address which called `safeTransferFrom` function",
+          "tokenId": "The NFT identifier which is being transferred"
+        },
+        "returns": {
+          "_0": "bytes4 `bytes4(keccak256(\"onERC721Received(address,address,uint256,bytes)\"))`"
+        }
+      }
+    },
+    "version": 1
+  },
+  "offset": [
+    72,
+    690
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x2B JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x150B7A02 EQ PUSH2 0x30 JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0xF6 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x80 DUP2 LT ISZERO PUSH2 0x46 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP3 CALLDATALOAD DUP2 AND SWAP3 PUSH1 0x20 DUP2 ADD CALLDATALOAD SWAP1 SWAP2 AND SWAP2 PUSH1 0x40 DUP3 ADD CALLDATALOAD SWAP2 SWAP1 DUP2 ADD SWAP1 PUSH1 0x80 DUP2 ADD PUSH1 0x60 DUP3 ADD CALLDATALOAD PUSH5 0x100000000 DUP2 GT ISZERO PUSH2 0x81 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP3 ADD DUP4 PUSH1 0x20 DUP3 ADD GT ISZERO PUSH2 0x93 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST DUP1 CALLDATALOAD SWAP1 PUSH1 0x20 ADD SWAP2 DUP5 PUSH1 0x1 DUP4 MUL DUP5 ADD GT PUSH5 0x100000000 DUP4 GT OR ISZERO PUSH2 0xB5 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP2 SWAP1 DUP1 DUP1 PUSH1 0x1F ADD PUSH1 0x20 DUP1 SWAP2 DIV MUL PUSH1 0x20 ADD PUSH1 0x40 MLOAD SWAP1 DUP2 ADD PUSH1 0x40 MSTORE DUP1 SWAP4 SWAP3 SWAP2 SWAP1 DUP2 DUP2 MSTORE PUSH1 0x20 ADD DUP4 DUP4 DUP1 DUP3 DUP5 CALLDATACOPY PUSH1 0x0 SWAP3 ADD SWAP2 SWAP1 SWAP2 MSTORE POP SWAP3 SWAP6 POP PUSH2 0x113 SWAP5 POP POP POP POP POP JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xE0 SHL SUB NOT SWAP1 SWAP3 AND DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH5 0x100000000 SWAP1 DIV PUSH1 0xFF AND ISZERO PUSH2 0x174 JUMPI PUSH1 0x40 DUP1 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x1D PUSH1 0x24 DUP3 ADD MSTORE PUSH32 0x45524337323152656365697665724D6F636B3A20726576657274696E67000000 PUSH1 0x44 DUP3 ADD MSTORE SWAP1 MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x64 ADD SWAP1 REVERT JUMPDEST PUSH32 0x28FA6E16458F9C24AA59DDD4085264573006DBE30304837873C7DEAFC702B038 DUP6 DUP6 DUP6 DUP6 GAS PUSH1 0x40 MLOAD DUP1 DUP7 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 MSTORE PUSH1 0x20 ADD DUP6 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 MSTORE PUSH1 0x20 ADD DUP5 DUP2 MSTORE PUSH1 0x20 ADD DUP1 PUSH1 0x20 ADD DUP4 DUP2 MSTORE PUSH1 0x20 ADD DUP3 DUP2 SUB DUP3 MSTORE DUP5 DUP2 DUP2 MLOAD DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP DUP1 MLOAD SWAP1 PUSH1 0x20 ADD SWAP1 DUP1 DUP4 DUP4 PUSH1 0x0 JUMPDEST DUP4 DUP2 LT ISZERO PUSH2 0x201 JUMPI DUP2 DUP2 ADD MLOAD DUP4 DUP3 ADD MSTORE PUSH1 0x20 ADD PUSH2 0x1E9 JUMP JUMPDEST POP POP POP POP SWAP1 POP SWAP1 DUP2 ADD SWAP1 PUSH1 0x1F AND DUP1 ISZERO PUSH2 0x22E JUMPI DUP1 DUP3 SUB DUP1 MLOAD PUSH1 0x1 DUP4 PUSH1 0x20 SUB PUSH2 0x100 EXP SUB NOT AND DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP JUMPDEST POP SWAP7 POP POP POP POP POP POP POP PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 LOG1 POP PUSH1 0x0 SLOAD PUSH1 0xE0 SHL SWAP5 SWAP4 POP POP POP POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 PUSH11 0x600EEDFEC4A203DCB4E721 EXP RETURN PUSH23 0xE4B81357A211B9B9DB6453CA285D23A81164736F6C6343 STOP MOD 0xC STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        72,
+        690
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "CALLVALUE",
+      "path": "51"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "ISZERO",
+      "path": "51"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "JUMPI",
+      "path": "51"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "REVERT",
+      "path": "51"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "CALLDATASIZE",
+      "path": "51"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "LT",
+      "path": "51"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0x2B"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "JUMPI",
+      "path": "51"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "CALLDATALOAD",
+      "path": "51"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "SHR",
+      "path": "51"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "PUSH4",
+      "path": "51",
+      "value": "0x150B7A02"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "EQ",
+      "path": "51"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0x30"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "JUMPI",
+      "path": "51"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x0"
+    },
+    "46": {
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "47": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        72,
+        690
+      ],
+      "op": "REVERT",
+      "path": "51"
+    },
+    "48": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "49": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0xF6"
+    },
+    "52": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x4"
+    },
+    "54": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "55": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "CALLDATASIZE",
+      "path": "51"
+    },
+    "56": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SUB",
+      "path": "51"
+    },
+    "57": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x80"
+    },
+    "59": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "60": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "LT",
+      "path": "51"
+    },
+    "61": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ISZERO",
+      "path": "51"
+    },
+    "62": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0x46"
+    },
+    "65": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMPI",
+      "path": "51"
+    },
+    "66": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x0"
+    },
+    "68": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "69": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "REVERT",
+      "path": "51"
+    },
+    "70": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "71": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "73": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "75": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "77": {
+      "op": "SHL"
+    },
+    "78": {
+      "op": "SUB"
+    },
+    "79": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "80": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "CALLDATALOAD",
+      "path": "51"
+    },
+    "81": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "82": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "AND",
+      "path": "51"
+    },
+    "83": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP3",
+      "path": "51"
+    },
+    "84": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "86": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "87": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "88": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "CALLDATALOAD",
+      "path": "51"
+    },
+    "89": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "90": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP2",
+      "path": "51"
+    },
+    "91": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "AND",
+      "path": "51"
+    },
+    "92": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP2",
+      "path": "51"
+    },
+    "93": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x40"
+    },
+    "95": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "96": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "97": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "CALLDATALOAD",
+      "path": "51"
+    },
+    "98": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP2",
+      "path": "51"
+    },
+    "99": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "100": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "101": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "102": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "103": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x80"
+    },
+    "105": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "106": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "107": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x60"
+    },
+    "109": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "110": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "111": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "CALLDATALOAD",
+      "path": "51"
+    },
+    "112": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH5",
+      "path": "51",
+      "value": "0x100000000"
+    },
+    "118": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "119": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "GT",
+      "path": "51"
+    },
+    "120": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ISZERO",
+      "path": "51"
+    },
+    "121": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0x81"
+    },
+    "124": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMPI",
+      "path": "51"
+    },
+    "125": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x0"
+    },
+    "127": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "128": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "REVERT",
+      "path": "51"
+    },
+    "129": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "130": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "131": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "132": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP4",
+      "path": "51"
+    },
+    "133": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "135": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "136": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "137": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "GT",
+      "path": "51"
+    },
+    "138": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ISZERO",
+      "path": "51"
+    },
+    "139": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0x93"
+    },
+    "142": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMPI",
+      "path": "51"
+    },
+    "143": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x0"
+    },
+    "145": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "146": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "REVERT",
+      "path": "51"
+    },
+    "147": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "148": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "149": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "CALLDATALOAD",
+      "path": "51"
+    },
+    "150": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "151": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "153": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "154": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP2",
+      "path": "51"
+    },
+    "155": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP5",
+      "path": "51"
+    },
+    "156": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x1"
+    },
+    "158": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP4",
+      "path": "51"
+    },
+    "159": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "MUL",
+      "path": "51"
+    },
+    "160": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP5",
+      "path": "51"
+    },
+    "161": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "162": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "GT",
+      "path": "51"
+    },
+    "163": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH5",
+      "path": "51",
+      "value": "0x100000000"
+    },
+    "169": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP4",
+      "path": "51"
+    },
+    "170": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "GT",
+      "path": "51"
+    },
+    "171": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "OR",
+      "path": "51"
+    },
+    "172": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ISZERO",
+      "path": "51"
+    },
+    "173": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0xB5"
+    },
+    "176": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMPI",
+      "path": "51"
+    },
+    "177": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x0"
+    },
+    "179": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "180": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "REVERT",
+      "path": "51"
+    },
+    "181": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "182": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP2",
+      "path": "51"
+    },
+    "183": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "184": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "185": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "186": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x1F"
+    },
+    "188": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "189": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "191": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "192": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP2",
+      "path": "51"
+    },
+    "193": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DIV",
+      "path": "51"
+    },
+    "194": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "MUL",
+      "path": "51"
+    },
+    "195": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "197": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "198": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x40"
+    },
+    "200": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "MLOAD",
+      "path": "51"
+    },
+    "201": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "202": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "203": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "204": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x40"
+    },
+    "206": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "207": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "208": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP4",
+      "path": "51"
+    },
+    "209": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP3",
+      "path": "51"
+    },
+    "210": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP2",
+      "path": "51"
+    },
+    "211": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "212": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "213": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "214": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "215": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "217": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "218": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP4",
+      "path": "51"
+    },
+    "219": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP4",
+      "path": "51"
+    },
+    "220": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "221": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "222": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP5",
+      "path": "51"
+    },
+    "223": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "CALLDATACOPY",
+      "path": "51"
+    },
+    "224": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x0"
+    },
+    "226": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP3",
+      "path": "51"
+    },
+    "227": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "228": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP2",
+      "path": "51"
+    },
+    "229": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "230": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP2",
+      "path": "51"
+    },
+    "231": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "232": {
+      "op": "POP"
+    },
+    "233": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP3",
+      "path": "51"
+    },
+    "234": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP6",
+      "path": "51"
+    },
+    "235": {
+      "op": "POP"
+    },
+    "236": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0x113"
+    },
+    "239": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP5",
+      "path": "51"
+    },
+    "240": {
+      "op": "POP"
+    },
+    "241": {
+      "op": "POP"
+    },
+    "242": {
+      "op": "POP"
+    },
+    "243": {
+      "op": "POP"
+    },
+    "244": {
+      "op": "POP"
+    },
+    "245": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "jump": "i",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMP",
+      "path": "51"
+    },
+    "246": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "247": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x40"
+    },
+    "249": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "250": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "MLOAD",
+      "path": "51"
+    },
+    "251": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "253": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "255": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "257": {
+      "op": "SHL"
+    },
+    "258": {
+      "op": "SUB"
+    },
+    "259": {
+      "op": "NOT"
+    },
+    "260": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "261": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP3",
+      "path": "51"
+    },
+    "262": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "AND",
+      "path": "51"
+    },
+    "263": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "264": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "265": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "MLOAD",
+      "path": "51"
+    },
+    "266": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "267": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "268": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "269": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SUB",
+      "path": "51"
+    },
+    "270": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "272": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "273": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "274": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "RETURN",
+      "path": "51"
+    },
+    "275": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "276": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        519,
+        525
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x0"
+    },
+    "278": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        550,
+        558
+      ],
+      "op": "DUP1",
+      "path": "51",
+      "statement": 0
+    },
+    "279": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        550,
+        558
+      ],
+      "op": "SLOAD",
+      "path": "51"
+    },
+    "280": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        550,
+        558
+      ],
+      "op": "PUSH5",
+      "path": "51",
+      "value": "0x100000000"
+    },
+    "286": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        550,
+        558
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "287": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        550,
+        558
+      ],
+      "op": "DIV",
+      "path": "51"
+    },
+    "288": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        550,
+        558
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0xFF"
+    },
+    "290": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        550,
+        558
+      ],
+      "op": "AND",
+      "path": "51"
+    },
+    "291": {
+      "branch": 3,
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        549,
+        558
+      ],
+      "op": "ISZERO",
+      "path": "51"
+    },
+    "292": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0x174"
+    },
+    "295": {
+      "branch": 3,
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "JUMPI",
+      "path": "51"
+    },
+    "296": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x40"
+    },
+    "298": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "299": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "MLOAD",
+      "path": "51"
+    },
+    "300": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "304": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "306": {
+      "op": "SHL"
+    },
+    "307": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "308": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "309": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "311": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x4"
+    },
+    "313": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "314": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "315": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "316": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x1D"
+    },
+    "318": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x24"
+    },
+    "320": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "321": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "322": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "323": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "PUSH32",
+      "path": "51",
+      "value": "0x45524337323152656365697665724D6F636B3A20726576657274696E67000000"
+    },
+    "356": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x44"
+    },
+    "358": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "359": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "360": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "361": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "362": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "MLOAD",
+      "path": "51"
+    },
+    "363": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "364": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "365": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "366": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "SUB",
+      "path": "51"
+    },
+    "367": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x64"
+    },
+    "369": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "370": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "371": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "REVERT",
+      "path": "51"
+    },
+    "372": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        541,
+        592
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "373": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH32",
+      "path": "51",
+      "statement": 1,
+      "value": "0x28FA6E16458F9C24AA59DDD4085264573006DBE30304837873C7DEAFC702B038"
+    },
+    "406": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        616,
+        624
+      ],
+      "op": "DUP6",
+      "path": "51"
+    },
+    "407": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        626,
+        630
+      ],
+      "op": "DUP6",
+      "path": "51"
+    },
+    "408": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        632,
+        639
+      ],
+      "op": "DUP6",
+      "path": "51"
+    },
+    "409": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        641,
+        645
+      ],
+      "op": "DUP6",
+      "path": "51"
+    },
+    "410": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        647,
+        656
+      ],
+      "op": "GAS",
+      "path": "51"
+    },
+    "411": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x40"
+    },
+    "413": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MLOAD",
+      "path": "51"
+    },
+    "414": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "415": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP7",
+      "path": "51"
+    },
+    "416": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "418": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "420": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "422": {
+      "op": "SHL"
+    },
+    "423": {
+      "op": "SUB"
+    },
+    "424": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "AND",
+      "path": "51"
+    },
+    "425": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "426": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "427": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "429": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "430": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP6",
+      "path": "51"
+    },
+    "431": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "433": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "435": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "437": {
+      "op": "SHL"
+    },
+    "438": {
+      "op": "SUB"
+    },
+    "439": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "AND",
+      "path": "51"
+    },
+    "440": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "441": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "442": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "444": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "445": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP5",
+      "path": "51"
+    },
+    "446": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "447": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "448": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "450": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "451": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "452": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "454": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "455": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP4",
+      "path": "51"
+    },
+    "456": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "457": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "458": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "460": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "461": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "462": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "463": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SUB",
+      "path": "51"
+    },
+    "464": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "465": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "466": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP5",
+      "path": "51"
+    },
+    "467": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "468": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "469": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MLOAD",
+      "path": "51"
+    },
+    "470": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "471": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "472": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "474": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "475": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SWAP2",
+      "path": "51"
+    },
+    "476": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "477": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "478": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MLOAD",
+      "path": "51"
+    },
+    "479": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "480": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "482": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "483": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "484": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "485": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP4",
+      "path": "51"
+    },
+    "486": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP4",
+      "path": "51"
+    },
+    "487": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x0"
+    },
+    "489": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "490": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP4",
+      "path": "51"
+    },
+    "491": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "492": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "LT",
+      "path": "51"
+    },
+    "493": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ISZERO",
+      "path": "51"
+    },
+    "494": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0x201"
+    },
+    "497": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "JUMPI",
+      "path": "51"
+    },
+    "498": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "499": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "500": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "501": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MLOAD",
+      "path": "51"
+    },
+    "502": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP4",
+      "path": "51"
+    },
+    "503": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "504": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "505": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "506": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "508": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "509": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0x1E9"
+    },
+    "512": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "JUMP",
+      "path": "51"
+    },
+    "513": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "514": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "515": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "516": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "517": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "518": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "519": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "520": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "521": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "522": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "523": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "524": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x1F"
+    },
+    "526": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "AND",
+      "path": "51"
+    },
+    "527": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "528": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ISZERO",
+      "path": "51"
+    },
+    "529": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0x22E"
+    },
+    "532": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "JUMPI",
+      "path": "51"
+    },
+    "533": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "534": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP3",
+      "path": "51"
+    },
+    "535": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SUB",
+      "path": "51"
+    },
+    "536": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "537": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MLOAD",
+      "path": "51"
+    },
+    "538": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x1"
+    },
+    "540": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP4",
+      "path": "51"
+    },
+    "541": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "543": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SUB",
+      "path": "51"
+    },
+    "544": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH2",
+      "path": "51",
+      "value": "0x100"
+    },
+    "547": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "EXP",
+      "path": "51"
+    },
+    "548": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SUB",
+      "path": "51"
+    },
+    "549": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "NOT",
+      "path": "51"
+    },
+    "550": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "AND",
+      "path": "51"
+    },
+    "551": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP2",
+      "path": "51"
+    },
+    "552": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MSTORE",
+      "path": "51"
+    },
+    "553": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x20"
+    },
+    "555": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "ADD",
+      "path": "51"
+    },
+    "556": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SWAP2",
+      "path": "51"
+    },
+    "557": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "558": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "JUMPDEST",
+      "path": "51"
+    },
+    "559": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "560": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SWAP7",
+      "path": "51"
+    },
+    "561": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "562": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "563": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "564": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "565": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "566": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "567": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "568": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0x40"
+    },
+    "570": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "MLOAD",
+      "path": "51"
+    },
+    "571": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "DUP1",
+      "path": "51"
+    },
+    "572": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SWAP2",
+      "path": "51"
+    },
+    "573": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SUB",
+      "path": "51"
+    },
+    "574": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "SWAP1",
+      "path": "51"
+    },
+    "575": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        607,
+        657
+      ],
+      "op": "LOG1",
+      "path": "51"
+    },
+    "576": {
+      "op": "POP"
+    },
+    "577": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        674,
+        681
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "statement": 2,
+      "value": "0x0"
+    },
+    "579": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        674,
+        681
+      ],
+      "op": "SLOAD",
+      "path": "51"
+    },
+    "580": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        674,
+        681
+      ],
+      "op": "PUSH1",
+      "path": "51",
+      "value": "0xE0"
+    },
+    "582": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        674,
+        681
+      ],
+      "op": "SHL",
+      "path": "51"
+    },
+    "583": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP5",
+      "path": "51"
+    },
+    "584": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "SWAP4",
+      "path": "51"
+    },
+    "585": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "586": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "587": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "588": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "POP",
+      "path": "51"
+    },
+    "589": {
+      "fn": "ERC721ReceiverMock.onERC721Received",
+      "jump": "o",
+      "offset": [
+        392,
+        688
+      ],
+      "op": "JUMP",
+      "path": "51"
+    }
+  },
+  "sha1": "eaadf8ba153aadcdff22d0e238f18bfdc2e4b3e1",
+  "source": "pragma solidity ^0.6.0;\n\nimport \"../token/ERC721/IERC721Receiver.sol\";\n\ncontract ERC721ReceiverMock is IERC721Receiver {\n    bytes4 private _retval;\n    bool private _reverts;\n\n    event Received(address operator, address from, uint256 tokenId, bytes data, uint256 gas);\n\n    constructor (bytes4 retval, bool reverts) public {\n        _retval = retval;\n        _reverts = reverts;\n    }\n\n    function onERC721Received(address operator, address from, uint256 tokenId, bytes memory data)\n        public override returns (bytes4)\n    {\n        require(!_reverts, \"ERC721ReceiverMock: reverting\");\n        emit Received(operator, from, tokenId, data, gasleft());\n        return _retval;\n    }\n}\n",
+  "sourceMap": "72:618:51:-:0;;;276:110;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;276:110:51;;;;;;;335:7;:16;;361:18;;;;;-1:-1:-1;;;;335:16:51;;;;;-1:-1:-1;;335:16:51;;;;;;;361:18;;;;;;;72:618;;;;;;",
+  "sourcePath": "contracts/openzeppelin/contracts/mocks/ERC721ReceiverMock.sol",
+  "type": "contract"
+}

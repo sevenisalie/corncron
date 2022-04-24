@@ -1,0 +1,240 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "interfaceHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "canImplementInterfaceForAddress",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "23": "contracts/openzeppelin/contracts/introspection/IERC1820Implementer.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/openzeppelin/contracts/introspection/IERC1820Implementer.sol",
+    "exportedSymbols": {
+      "IERC1820Implementer": [
+        8688
+      ]
+    },
+    "id": 8689,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8676,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:23"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 8677,
+          "nodeType": "StructuredDocumentation",
+          "src": "25:264:23",
+          "text": " @dev Interface for an ERC1820 implementer, as defined in the\n https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface[EIP].\n Used by contracts that will be registered as implementers in the\n {IERC1820Registry}."
+        },
+        "fullyImplemented": false,
+        "id": 8688,
+        "linearizedBaseContracts": [
+          8688
+        ],
+        "name": "IERC1820Implementer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 8678,
+              "nodeType": "StructuredDocumentation",
+              "src": "326:200:23",
+              "text": " @dev Returns a special value (`ERC1820_ACCEPT_MAGIC`) if this contract\n implements `interfaceHash` for `account`.\n See {IERC1820Registry-setInterfaceImplementer}."
+            },
+            "functionSelector": "249cb3fa",
+            "id": 8687,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "canImplementInterfaceForAddress",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 8683,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8680,
+                  "mutability": "mutable",
+                  "name": "interfaceHash",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 8687,
+                  "src": "572:21:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 8679,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "572:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 8682,
+                  "mutability": "mutable",
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 8687,
+                  "src": "595:15:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8681,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "595:7:23",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "571:40:23"
+            },
+            "returnParameters": {
+              "id": 8686,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8685,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 8687,
+                  "src": "635:7:23",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 8684,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "635:7:23",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "634:9:23"
+            },
+            "scope": 8688,
+            "src": "531:113:23",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 8689,
+        "src": "290:356:23"
+      }
+    ],
+    "src": "0:647:23"
+  },
+  "bytecode": "",
+  "bytecodeSha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "IERC1820Implementer",
+  "coverageMap": {
+    "branches": {},
+    "statements": {}
+  },
+  "dependencies": [],
+  "deployedBytecode": "",
+  "deployedSourceMap": "",
+  "language": "Solidity",
+  "natspec": {
+    "details": "Interface for an ERC1820 implementer, as defined in the https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface[EIP]. Used by contracts that will be registered as implementers in the {IERC1820Registry}.",
+    "kind": "dev",
+    "methods": {
+      "canImplementInterfaceForAddress(bytes32,address)": {
+        "details": "Returns a special value (`ERC1820_ACCEPT_MAGIC`) if this contract implements `interfaceHash` for `account`. See {IERC1820Registry-setInterfaceImplementer}."
+      }
+    },
+    "version": 1
+  },
+  "offset": [
+    290,
+    646
+  ],
+  "opcodes": "",
+  "pcMap": {},
+  "sha1": "33fdf28d2d39f519792353d2bc994f7f49fa26b1",
+  "source": "pragma solidity ^0.6.0;\n\n/**\n * @dev Interface for an ERC1820 implementer, as defined in the\n * https://eips.ethereum.org/EIPS/eip-1820#interface-implementation-erc1820implementerinterface[EIP].\n * Used by contracts that will be registered as implementers in the\n * {IERC1820Registry}.\n */\ninterface IERC1820Implementer {\n    /**\n     * @dev Returns a special value (`ERC1820_ACCEPT_MAGIC`) if this contract\n     * implements `interfaceHash` for `account`.\n     *\n     * See {IERC1820Registry-setInterfaceImplementer}.\n     */\n    function canImplementInterfaceForAddress(bytes32 interfaceHash, address account) external view returns (bytes32);\n}\n",
+  "sourceMap": "",
+  "sourcePath": "contracts/openzeppelin/contracts/introspection/IERC1820Implementer.sol",
+  "type": "interface"
+}

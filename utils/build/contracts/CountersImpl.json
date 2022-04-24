@@ -1,0 +1,3039 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "current",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "decrement",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "increment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "101": "contracts/openzeppelin/contracts/utils/Counters.sol",
+    "26": "contracts/openzeppelin/contracts/math/SafeMath.sol",
+    "33": "contracts/openzeppelin/contracts/mocks/CountersImpl.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/openzeppelin/contracts/mocks/CountersImpl.sol",
+    "exportedSymbols": {
+      "CountersImpl": [
+        9471
+      ]
+    },
+    "id": 9472,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9436,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:33"
+      },
+      {
+        "absolutePath": "contracts/openzeppelin/contracts/utils/Counters.sol",
+        "file": "../utils/Counters.sol",
+        "id": 9437,
+        "nodeType": "ImportDirective",
+        "scope": 9472,
+        "sourceUnit": 17233,
+        "src": "25:31:33",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 9471,
+        "linearizedBaseContracts": [
+          9471
+        ],
+        "name": "CountersImpl",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 9440,
+            "libraryName": {
+              "contractScope": null,
+              "id": 9438,
+              "name": "Counters",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 17232,
+              "src": "92:8:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Counters_$17232",
+                "typeString": "library Counters"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "86:36:33",
+            "typeName": {
+              "contractScope": null,
+              "id": 9439,
+              "name": "Counters.Counter",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 17192,
+              "src": "105:16:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Counter_$17192_storage_ptr",
+                "typeString": "struct Counters.Counter"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 9442,
+            "mutability": "mutable",
+            "name": "_counter",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 9471,
+            "src": "128:33:33",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_Counter_$17192_storage",
+              "typeString": "struct Counters.Counter"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 9441,
+              "name": "Counters.Counter",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 17192,
+              "src": "128:16:33",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_Counter_$17192_storage_ptr",
+                "typeString": "struct Counters.Counter"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 9451,
+              "nodeType": "Block",
+              "src": "217:42:33",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9447,
+                        "name": "_counter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9442,
+                        "src": "234:8:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$17192_storage",
+                          "typeString": "struct Counters.Counter storage ref"
+                        }
+                      },
+                      "id": 9448,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "current",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 17203,
+                      "src": "234:16:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_Counter_$17192_storage_ptr_$returns$_t_uint256_$bound_to$_t_struct$_Counter_$17192_storage_ptr_$",
+                        "typeString": "function (struct Counters.Counter storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 9449,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "234:18:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 9446,
+                  "id": 9450,
+                  "nodeType": "Return",
+                  "src": "227:25:33"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "9fa6a6e3",
+            "id": 9452,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "current",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9443,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "184:2:33"
+            },
+            "returnParameters": {
+              "id": 9446,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 9445,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 9452,
+                  "src": "208:7:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9444,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "208:7:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "207:9:33"
+            },
+            "scope": 9471,
+            "src": "168:91:33",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9460,
+              "nodeType": "Block",
+              "src": "293:37:33",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9455,
+                        "name": "_counter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9442,
+                        "src": "303:8:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$17192_storage",
+                          "typeString": "struct Counters.Counter storage ref"
+                        }
+                      },
+                      "id": 9457,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "increment",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 17215,
+                      "src": "303:18:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$17192_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$17192_storage_ptr_$",
+                        "typeString": "function (struct Counters.Counter storage pointer)"
+                      }
+                    },
+                    "id": 9458,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "303:20:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 9459,
+                  "nodeType": "ExpressionStatement",
+                  "src": "303:20:33"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "d09de08a",
+            "id": 9461,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "increment",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9453,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "283:2:33"
+            },
+            "returnParameters": {
+              "id": 9454,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "293:0:33"
+            },
+            "scope": 9471,
+            "src": "265:65:33",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 9469,
+              "nodeType": "Block",
+              "src": "364:37:33",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 9464,
+                        "name": "_counter",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 9442,
+                        "src": "374:8:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Counter_$17192_storage",
+                          "typeString": "struct Counters.Counter storage ref"
+                        }
+                      },
+                      "id": 9466,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "decrement",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 17231,
+                      "src": "374:18:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_Counter_$17192_storage_ptr_$returns$__$bound_to$_t_struct$_Counter_$17192_storage_ptr_$",
+                        "typeString": "function (struct Counters.Counter storage pointer)"
+                      }
+                    },
+                    "id": 9467,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "374:20:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 9468,
+                  "nodeType": "ExpressionStatement",
+                  "src": "374:20:33"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "2baeceb7",
+            "id": 9470,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "decrement",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 9462,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "354:2:33"
+            },
+            "returnParameters": {
+              "id": 9463,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "364:0:33"
+            },
+            "scope": 9471,
+            "src": "336:65:33",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 9472,
+        "src": "58:345:33"
+      }
+    ],
+    "src": "0:404:33"
+  },
+  "bytecode": "608060405234801561001057600080fd5b506101cd806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80632baeceb7146100465780639fa6a6e314610050578063d09de08a1461006a575b600080fd5b61004e610072565b005b61005861007e565b60408051918252519081900360200190f35b61004e61008f565b61007c6000610099565b565b600061008a60006100aa565b905090565b61007c60006100ae565b80546100a69060016100b7565b9055565b5490565b80546001019055565b60006100f983836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f770000815250610100565b9392505050565b6000818484111561018f5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561015457818101518382015260200161013c565b50505050905090810190601f1680156101815780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50505090039056fea264697066735822122005d377e28b199637550b98f52467b1a85788a8ab2af239f99b9f8c96e602d34864736f6c634300060c0033",
+  "bytecodeSha1": "1e5810383127193fa9133adcd34913cdb19f59b0",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "CountersImpl",
+  "coverageMap": {
+    "branches": {
+      "101": {},
+      "26": {
+        "SafeMath.sub": {
+          "8": [
+            1805,
+            1811,
+            true
+          ]
+        }
+      },
+      "33": {}
+    },
+    "statements": {
+      "101": {
+        "Counters.current": {
+          "4": [
+            1149,
+            1170
+          ]
+        },
+        "Counters.decrement": {
+          "3": [
+            1430,
+            1468
+          ]
+        },
+        "Counters.increment": {
+          "5": [
+            1335,
+            1354
+          ]
+        }
+      },
+      "26": {
+        "SafeMath.sub": {
+          "6": [
+            1351,
+            1401
+          ],
+          "7": [
+            1797,
+            1826
+          ]
+        }
+      },
+      "33": {
+        "CountersImpl.current": {
+          "1": [
+            227,
+            252
+          ]
+        },
+        "CountersImpl.decrement": {
+          "0": [
+            374,
+            394
+          ]
+        },
+        "CountersImpl.increment": {
+          "2": [
+            303,
+            323
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [
+    "Counters",
+    "SafeMath"
+  ],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100415760003560e01c80632baeceb7146100465780639fa6a6e314610050578063d09de08a1461006a575b600080fd5b61004e610072565b005b61005861007e565b60408051918252519081900360200190f35b61004e61008f565b61007c6000610099565b565b600061008a60006100aa565b905090565b61007c60006100ae565b80546100a69060016100b7565b9055565b5490565b80546001019055565b60006100f983836040518060400160405280601e81526020017f536166654d6174683a207375627472616374696f6e206f766572666c6f770000815250610100565b9392505050565b6000818484111561018f5760405162461bcd60e51b81526004018080602001828103825283818151815260200191508051906020019080838360005b8381101561015457818101518382015260200161013c565b50505050905090810190601f1680156101815780820380516001836020036101000a031916815260200191505b509250505060405180910390fd5b50505090039056fea264697066735822122005d377e28b199637550b98f52467b1a85788a8ab2af239f99b9f8c96e602d34864736f6c634300060c0033",
+  "deployedSourceMap": "58:345:33:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;336:65;;;:::i;:::-;;168:91;;;:::i;:::-;;;;;;;;;;;;;;;;265:65;;;:::i;336:::-;374:20;:8;:18;:20::i;:::-;336:65::o;168:91::-;208:7;234:18;:8;:16;:18::i;:::-;227:25;;168:91;:::o;265:65::-;303:20;:8;:18;:20::i;1367:108:101:-;1447:14;;:21;;1466:1;1447:18;:21::i;:::-;1430:38;;1367:108::o;1065:112::-;1156:14;;1065:112::o;1183:178::-;1335:19;;1353:1;1335:19;;;1183:178::o;1274:134:26:-;1332:7;1358:43;1362:1;1365;1358:43;;;;;;;;;;;;;;;;;:3;:43::i;:::-;1351:50;1274:134;-1:-1:-1;;;1274:134:26:o;1692:187::-;1778:7;1813:12;1805:6;;;;1797:29;;;;-1:-1:-1;;;1797:29:26;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;1848:5:26;;;1692:187::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    58,
+    403
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x2BAECEB7 EQ PUSH2 0x46 JUMPI DUP1 PUSH4 0x9FA6A6E3 EQ PUSH2 0x50 JUMPI DUP1 PUSH4 0xD09DE08A EQ PUSH2 0x6A JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x4E PUSH2 0x72 JUMP JUMPDEST STOP JUMPDEST PUSH2 0x58 PUSH2 0x7E JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0x4E PUSH2 0x8F JUMP JUMPDEST PUSH2 0x7C PUSH1 0x0 PUSH2 0x99 JUMP JUMPDEST JUMP JUMPDEST PUSH1 0x0 PUSH2 0x8A PUSH1 0x0 PUSH2 0xAA JUMP JUMPDEST SWAP1 POP SWAP1 JUMP JUMPDEST PUSH2 0x7C PUSH1 0x0 PUSH2 0xAE JUMP JUMPDEST DUP1 SLOAD PUSH2 0xA6 SWAP1 PUSH1 0x1 PUSH2 0xB7 JUMP JUMPDEST SWAP1 SSTORE JUMP JUMPDEST SLOAD SWAP1 JUMP JUMPDEST DUP1 SLOAD PUSH1 0x1 ADD SWAP1 SSTORE JUMP JUMPDEST PUSH1 0x0 PUSH2 0xF9 DUP4 DUP4 PUSH1 0x40 MLOAD DUP1 PUSH1 0x40 ADD PUSH1 0x40 MSTORE DUP1 PUSH1 0x1E DUP2 MSTORE PUSH1 0x20 ADD PUSH32 0x536166654D6174683A207375627472616374696F6E206F766572666C6F770000 DUP2 MSTORE POP PUSH2 0x100 JUMP JUMPDEST SWAP4 SWAP3 POP POP POP JUMP JUMPDEST PUSH1 0x0 DUP2 DUP5 DUP5 GT ISZERO PUSH2 0x18F JUMPI PUSH1 0x40 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x4 ADD DUP1 DUP1 PUSH1 0x20 ADD DUP3 DUP2 SUB DUP3 MSTORE DUP4 DUP2 DUP2 MLOAD DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP DUP1 MLOAD SWAP1 PUSH1 0x20 ADD SWAP1 DUP1 DUP4 DUP4 PUSH1 0x0 JUMPDEST DUP4 DUP2 LT ISZERO PUSH2 0x154 JUMPI DUP2 DUP2 ADD MLOAD DUP4 DUP3 ADD MSTORE PUSH1 0x20 ADD PUSH2 0x13C JUMP JUMPDEST POP POP POP POP SWAP1 POP SWAP1 DUP2 ADD SWAP1 PUSH1 0x1F AND DUP1 ISZERO PUSH2 0x181 JUMPI DUP1 DUP3 SUB DUP1 MLOAD PUSH1 0x1 DUP4 PUSH1 0x20 SUB PUSH2 0x100 EXP SUB NOT AND DUP2 MSTORE PUSH1 0x20 ADD SWAP2 POP JUMPDEST POP SWAP3 POP POP POP PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 REVERT JUMPDEST POP POP POP SWAP1 SUB SWAP1 JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 SDIV 0xD3 PUSH24 0xE28B199637550B98F52467B1A85788A8AB2AF239F99B9F8C SWAP7 0xE6 MUL 0xD3 0x48 PUSH5 0x736F6C6343 STOP MOD 0xC STOP CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "MSTORE",
+      "path": "33"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "CALLVALUE",
+      "path": "33"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "DUP1",
+      "path": "33"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "ISZERO",
+      "path": "33"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "JUMPI",
+      "path": "33"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "DUP1",
+      "path": "33"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "REVERT",
+      "path": "33"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "JUMPDEST",
+      "path": "33"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "POP",
+      "path": "33"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "CALLDATASIZE",
+      "path": "33"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "LT",
+      "path": "33"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0x41"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "JUMPI",
+      "path": "33"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "CALLDATALOAD",
+      "path": "33"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "SHR",
+      "path": "33"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "DUP1",
+      "path": "33"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH4",
+      "path": "33",
+      "value": "0x2BAECEB7"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "EQ",
+      "path": "33"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0x46"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "JUMPI",
+      "path": "33"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "DUP1",
+      "path": "33"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH4",
+      "path": "33",
+      "value": "0x9FA6A6E3"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "EQ",
+      "path": "33"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0x50"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "JUMPI",
+      "path": "33"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "DUP1",
+      "path": "33"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH4",
+      "path": "33",
+      "value": "0xD09DE08A"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "EQ",
+      "path": "33"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0x6A"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "JUMPI",
+      "path": "33"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "JUMPDEST",
+      "path": "33"
+    },
+    "66": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0x0"
+    },
+    "68": {
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "DUP1",
+      "path": "33"
+    },
+    "69": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        58,
+        403
+      ],
+      "op": "REVERT",
+      "path": "33"
+    },
+    "70": {
+      "fn": "CountersImpl.decrement",
+      "offset": [
+        336,
+        401
+      ],
+      "op": "JUMPDEST",
+      "path": "33"
+    },
+    "71": {
+      "fn": "CountersImpl.decrement",
+      "offset": [
+        336,
+        401
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0x4E"
+    },
+    "74": {
+      "fn": "CountersImpl.decrement",
+      "offset": [
+        336,
+        401
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0x72"
+    },
+    "77": {
+      "fn": "CountersImpl.decrement",
+      "jump": "i",
+      "offset": [
+        336,
+        401
+      ],
+      "op": "JUMP",
+      "path": "33"
+    },
+    "78": {
+      "fn": "CountersImpl.decrement",
+      "offset": [
+        336,
+        401
+      ],
+      "op": "JUMPDEST",
+      "path": "33"
+    },
+    "79": {
+      "fn": "CountersImpl.decrement",
+      "offset": [
+        336,
+        401
+      ],
+      "op": "STOP",
+      "path": "33"
+    },
+    "80": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "JUMPDEST",
+      "path": "33"
+    },
+    "81": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0x58"
+    },
+    "84": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0x7E"
+    },
+    "87": {
+      "fn": "CountersImpl.current",
+      "jump": "i",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "JUMP",
+      "path": "33"
+    },
+    "88": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "JUMPDEST",
+      "path": "33"
+    },
+    "89": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0x40"
+    },
+    "91": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "DUP1",
+      "path": "33"
+    },
+    "92": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "MLOAD",
+      "path": "33"
+    },
+    "93": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "SWAP2",
+      "path": "33"
+    },
+    "94": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "DUP3",
+      "path": "33"
+    },
+    "95": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "MSTORE",
+      "path": "33"
+    },
+    "96": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "MLOAD",
+      "path": "33"
+    },
+    "97": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "SWAP1",
+      "path": "33"
+    },
+    "98": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "DUP2",
+      "path": "33"
+    },
+    "99": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "SWAP1",
+      "path": "33"
+    },
+    "100": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "SUB",
+      "path": "33"
+    },
+    "101": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0x20"
+    },
+    "103": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "ADD",
+      "path": "33"
+    },
+    "104": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "SWAP1",
+      "path": "33"
+    },
+    "105": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "RETURN",
+      "path": "33"
+    },
+    "106": {
+      "fn": "CountersImpl.increment",
+      "offset": [
+        265,
+        330
+      ],
+      "op": "JUMPDEST",
+      "path": "33"
+    },
+    "107": {
+      "fn": "CountersImpl.increment",
+      "offset": [
+        265,
+        330
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0x4E"
+    },
+    "110": {
+      "fn": "CountersImpl.increment",
+      "offset": [
+        265,
+        330
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0x8F"
+    },
+    "113": {
+      "fn": "CountersImpl.increment",
+      "jump": "i",
+      "offset": [
+        265,
+        330
+      ],
+      "op": "JUMP",
+      "path": "33"
+    },
+    "114": {
+      "fn": "CountersImpl.decrement",
+      "offset": [
+        336,
+        401
+      ],
+      "op": "JUMPDEST",
+      "path": "33"
+    },
+    "115": {
+      "fn": "CountersImpl.decrement",
+      "offset": [
+        374,
+        394
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "statement": 0,
+      "value": "0x7C"
+    },
+    "118": {
+      "fn": "CountersImpl.decrement",
+      "offset": [
+        374,
+        382
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0x0"
+    },
+    "120": {
+      "fn": "CountersImpl.decrement",
+      "offset": [
+        374,
+        392
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0x99"
+    },
+    "123": {
+      "fn": "CountersImpl.decrement",
+      "jump": "i",
+      "offset": [
+        374,
+        394
+      ],
+      "op": "JUMP",
+      "path": "33"
+    },
+    "124": {
+      "fn": "CountersImpl.decrement",
+      "offset": [
+        374,
+        394
+      ],
+      "op": "JUMPDEST",
+      "path": "33"
+    },
+    "125": {
+      "fn": "CountersImpl.decrement",
+      "jump": "o",
+      "offset": [
+        336,
+        401
+      ],
+      "op": "JUMP",
+      "path": "33"
+    },
+    "126": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "JUMPDEST",
+      "path": "33"
+    },
+    "127": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        208,
+        215
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0x0"
+    },
+    "129": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        234,
+        252
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "statement": 1,
+      "value": "0x8A"
+    },
+    "132": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        234,
+        242
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0x0"
+    },
+    "134": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        234,
+        250
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0xAA"
+    },
+    "137": {
+      "fn": "CountersImpl.current",
+      "jump": "i",
+      "offset": [
+        234,
+        252
+      ],
+      "op": "JUMP",
+      "path": "33"
+    },
+    "138": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        234,
+        252
+      ],
+      "op": "JUMPDEST",
+      "path": "33"
+    },
+    "139": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        227,
+        252
+      ],
+      "op": "SWAP1",
+      "path": "33"
+    },
+    "140": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        227,
+        252
+      ],
+      "op": "POP",
+      "path": "33"
+    },
+    "141": {
+      "fn": "CountersImpl.current",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "SWAP1",
+      "path": "33"
+    },
+    "142": {
+      "fn": "CountersImpl.current",
+      "jump": "o",
+      "offset": [
+        168,
+        259
+      ],
+      "op": "JUMP",
+      "path": "33"
+    },
+    "143": {
+      "fn": "CountersImpl.increment",
+      "offset": [
+        265,
+        330
+      ],
+      "op": "JUMPDEST",
+      "path": "33"
+    },
+    "144": {
+      "fn": "CountersImpl.increment",
+      "offset": [
+        303,
+        323
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "statement": 2,
+      "value": "0x7C"
+    },
+    "147": {
+      "fn": "CountersImpl.increment",
+      "offset": [
+        303,
+        311
+      ],
+      "op": "PUSH1",
+      "path": "33",
+      "value": "0x0"
+    },
+    "149": {
+      "fn": "CountersImpl.increment",
+      "offset": [
+        303,
+        321
+      ],
+      "op": "PUSH2",
+      "path": "33",
+      "value": "0xAE"
+    },
+    "152": {
+      "fn": "CountersImpl.increment",
+      "jump": "i",
+      "offset": [
+        303,
+        323
+      ],
+      "op": "JUMP",
+      "path": "33"
+    },
+    "153": {
+      "fn": "Counters.decrement",
+      "offset": [
+        1367,
+        1475
+      ],
+      "op": "JUMPDEST",
+      "path": "101"
+    },
+    "154": {
+      "fn": "Counters.decrement",
+      "offset": [
+        1447,
+        1461
+      ],
+      "op": "DUP1",
+      "path": "101",
+      "statement": 3
+    },
+    "155": {
+      "fn": "Counters.decrement",
+      "offset": [
+        1447,
+        1461
+      ],
+      "op": "SLOAD",
+      "path": "101"
+    },
+    "156": {
+      "fn": "Counters.decrement",
+      "offset": [
+        1447,
+        1468
+      ],
+      "op": "PUSH2",
+      "path": "101",
+      "value": "0xA6"
+    },
+    "159": {
+      "fn": "Counters.decrement",
+      "offset": [
+        1447,
+        1468
+      ],
+      "op": "SWAP1",
+      "path": "101"
+    },
+    "160": {
+      "fn": "Counters.decrement",
+      "offset": [
+        1466,
+        1467
+      ],
+      "op": "PUSH1",
+      "path": "101",
+      "value": "0x1"
+    },
+    "162": {
+      "fn": "Counters.decrement",
+      "offset": [
+        1447,
+        1465
+      ],
+      "op": "PUSH2",
+      "path": "101",
+      "value": "0xB7"
+    },
+    "165": {
+      "fn": "Counters.decrement",
+      "jump": "i",
+      "offset": [
+        1447,
+        1468
+      ],
+      "op": "JUMP",
+      "path": "101"
+    },
+    "166": {
+      "fn": "Counters.decrement",
+      "offset": [
+        1447,
+        1468
+      ],
+      "op": "JUMPDEST",
+      "path": "101"
+    },
+    "167": {
+      "fn": "Counters.decrement",
+      "offset": [
+        1430,
+        1468
+      ],
+      "op": "SWAP1",
+      "path": "101"
+    },
+    "168": {
+      "fn": "Counters.decrement",
+      "offset": [
+        1430,
+        1468
+      ],
+      "op": "SSTORE",
+      "path": "101"
+    },
+    "169": {
+      "fn": "Counters.decrement",
+      "jump": "o",
+      "offset": [
+        1367,
+        1475
+      ],
+      "op": "JUMP",
+      "path": "101"
+    },
+    "170": {
+      "fn": "Counters.current",
+      "offset": [
+        1065,
+        1177
+      ],
+      "op": "JUMPDEST",
+      "path": "101"
+    },
+    "171": {
+      "fn": "Counters.current",
+      "offset": [
+        1156,
+        1170
+      ],
+      "op": "SLOAD",
+      "path": "101",
+      "statement": 4
+    },
+    "172": {
+      "fn": "Counters.current",
+      "offset": [
+        1156,
+        1170
+      ],
+      "op": "SWAP1",
+      "path": "101"
+    },
+    "173": {
+      "fn": "Counters.current",
+      "jump": "o",
+      "offset": [
+        1065,
+        1177
+      ],
+      "op": "JUMP",
+      "path": "101"
+    },
+    "174": {
+      "fn": "Counters.increment",
+      "offset": [
+        1183,
+        1361
+      ],
+      "op": "JUMPDEST",
+      "path": "101"
+    },
+    "175": {
+      "fn": "Counters.increment",
+      "offset": [
+        1335,
+        1354
+      ],
+      "op": "DUP1",
+      "path": "101",
+      "statement": 5
+    },
+    "176": {
+      "fn": "Counters.increment",
+      "offset": [
+        1335,
+        1354
+      ],
+      "op": "SLOAD",
+      "path": "101"
+    },
+    "177": {
+      "fn": "Counters.increment",
+      "offset": [
+        1353,
+        1354
+      ],
+      "op": "PUSH1",
+      "path": "101",
+      "value": "0x1"
+    },
+    "179": {
+      "fn": "Counters.increment",
+      "offset": [
+        1335,
+        1354
+      ],
+      "op": "ADD",
+      "path": "101"
+    },
+    "180": {
+      "fn": "Counters.increment",
+      "offset": [
+        1335,
+        1354
+      ],
+      "op": "SWAP1",
+      "path": "101"
+    },
+    "181": {
+      "fn": "Counters.increment",
+      "offset": [
+        1335,
+        1354
+      ],
+      "op": "SSTORE",
+      "path": "101"
+    },
+    "182": {
+      "fn": "Counters.increment",
+      "jump": "o",
+      "offset": [
+        1183,
+        1361
+      ],
+      "op": "JUMP",
+      "path": "101"
+    },
+    "183": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1274,
+        1408
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "184": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1332,
+        1339
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "186": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "statement": 6,
+      "value": "0xF9"
+    },
+    "189": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1362,
+        1363
+      ],
+      "op": "DUP4",
+      "path": "26"
+    },
+    "190": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1365,
+        1366
+      ],
+      "op": "DUP4",
+      "path": "26"
+    },
+    "191": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "193": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "194": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "195": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "197": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "198": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "200": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "201": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "202": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x1E"
+    },
+    "204": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "205": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "206": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x20"
+    },
+    "208": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "209": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "PUSH32",
+      "path": "26",
+      "value": "0x536166654D6174683A207375627472616374696F6E206F766572666C6F770000"
+    },
+    "242": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "243": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "244": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "245": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1361
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x100"
+    },
+    "248": {
+      "fn": "SafeMath.sub",
+      "jump": "i",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "JUMP",
+      "path": "26"
+    },
+    "249": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1358,
+        1401
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "250": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1351,
+        1401
+      ],
+      "op": "SWAP4",
+      "path": "26"
+    },
+    "251": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1274,
+        1408
+      ],
+      "op": "SWAP3",
+      "path": "26"
+    },
+    "252": {
+      "op": "POP"
+    },
+    "253": {
+      "op": "POP"
+    },
+    "254": {
+      "op": "POP"
+    },
+    "255": {
+      "fn": "SafeMath.sub",
+      "jump": "o",
+      "offset": [
+        1274,
+        1408
+      ],
+      "op": "JUMP",
+      "path": "26"
+    },
+    "256": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1692,
+        1879
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "257": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1778,
+        1785
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "259": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1813,
+        1825
+      ],
+      "op": "DUP2",
+      "path": "26",
+      "statement": 7
+    },
+    "260": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1805,
+        1811
+      ],
+      "op": "DUP5",
+      "path": "26"
+    },
+    "261": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1805,
+        1811
+      ],
+      "op": "DUP5",
+      "path": "26"
+    },
+    "262": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1805,
+        1811
+      ],
+      "op": "GT",
+      "path": "26"
+    },
+    "263": {
+      "branch": 8,
+      "fn": "SafeMath.sub",
+      "offset": [
+        1805,
+        1811
+      ],
+      "op": "ISZERO",
+      "path": "26"
+    },
+    "264": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x18F"
+    },
+    "267": {
+      "branch": 8,
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "268": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "270": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "271": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "275": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "277": {
+      "op": "SHL"
+    },
+    "278": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "279": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "280": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x4"
+    },
+    "282": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "283": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "284": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "285": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x20"
+    },
+    "287": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "288": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP3",
+      "path": "26"
+    },
+    "289": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "290": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SUB",
+      "path": "26"
+    },
+    "291": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP3",
+      "path": "26"
+    },
+    "292": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "293": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP4",
+      "path": "26"
+    },
+    "294": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "295": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "296": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "297": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "298": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "299": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x20"
+    },
+    "301": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "302": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SWAP2",
+      "path": "26"
+    },
+    "303": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "304": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "305": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "306": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "307": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x20"
+    },
+    "309": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "310": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "311": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "312": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP4",
+      "path": "26"
+    },
+    "313": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP4",
+      "path": "26"
+    },
+    "314": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x0"
+    },
+    "316": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "317": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP4",
+      "path": "26"
+    },
+    "318": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "319": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "LT",
+      "path": "26"
+    },
+    "320": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "ISZERO",
+      "path": "26"
+    },
+    "321": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x154"
+    },
+    "324": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "325": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "326": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "327": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "328": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "329": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP4",
+      "path": "26"
+    },
+    "330": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP3",
+      "path": "26"
+    },
+    "331": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "332": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "333": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x20"
+    },
+    "335": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "336": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x13C"
+    },
+    "339": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "JUMP",
+      "path": "26"
+    },
+    "340": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "341": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "342": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "343": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "344": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "345": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "346": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "347": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "348": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "349": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "350": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "351": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x1F"
+    },
+    "353": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "AND",
+      "path": "26"
+    },
+    "354": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "355": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "ISZERO",
+      "path": "26"
+    },
+    "356": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x181"
+    },
+    "359": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "JUMPI",
+      "path": "26"
+    },
+    "360": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "361": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP3",
+      "path": "26"
+    },
+    "362": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SUB",
+      "path": "26"
+    },
+    "363": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "364": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "365": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x1"
+    },
+    "367": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP4",
+      "path": "26"
+    },
+    "368": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x20"
+    },
+    "370": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SUB",
+      "path": "26"
+    },
+    "371": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH2",
+      "path": "26",
+      "value": "0x100"
+    },
+    "374": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "EXP",
+      "path": "26"
+    },
+    "375": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SUB",
+      "path": "26"
+    },
+    "376": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "NOT",
+      "path": "26"
+    },
+    "377": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "AND",
+      "path": "26"
+    },
+    "378": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP2",
+      "path": "26"
+    },
+    "379": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "MSTORE",
+      "path": "26"
+    },
+    "380": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x20"
+    },
+    "382": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "ADD",
+      "path": "26"
+    },
+    "383": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SWAP2",
+      "path": "26"
+    },
+    "384": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "385": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "386": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "387": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SWAP3",
+      "path": "26"
+    },
+    "388": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "389": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "390": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "POP",
+      "path": "26"
+    },
+    "391": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "PUSH1",
+      "path": "26",
+      "value": "0x40"
+    },
+    "393": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "MLOAD",
+      "path": "26"
+    },
+    "394": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "DUP1",
+      "path": "26"
+    },
+    "395": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SWAP2",
+      "path": "26"
+    },
+    "396": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SUB",
+      "path": "26"
+    },
+    "397": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "398": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "REVERT",
+      "path": "26"
+    },
+    "399": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1797,
+        1826
+      ],
+      "op": "JUMPDEST",
+      "path": "26"
+    },
+    "400": {
+      "op": "POP"
+    },
+    "401": {
+      "op": "POP"
+    },
+    "402": {
+      "op": "POP"
+    },
+    "403": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1848,
+        1853
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "404": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1848,
+        1853
+      ],
+      "op": "SUB",
+      "path": "26"
+    },
+    "405": {
+      "fn": "SafeMath.sub",
+      "offset": [
+        1848,
+        1853
+      ],
+      "op": "SWAP1",
+      "path": "26"
+    },
+    "406": {
+      "fn": "SafeMath.sub",
+      "jump": "o",
+      "offset": [
+        1692,
+        1879
+      ],
+      "op": "JUMP",
+      "path": "26"
+    }
+  },
+  "sha1": "dc2b0aefe7d84d4e75a7a403c0d536415dd20c64",
+  "source": "pragma solidity ^0.6.0;\n\nimport \"../utils/Counters.sol\";\n\ncontract CountersImpl {\n    using Counters for Counters.Counter;\n\n    Counters.Counter private _counter;\n\n    function current() public view returns (uint256) {\n        return _counter.current();\n    }\n\n    function increment() public {\n        _counter.increment();\n    }\n\n    function decrement() public {\n        _counter.decrement();\n    }\n}\n",
+  "sourceMap": "58:345:33:-:0;;;;;;;;;;;;;;;;;;;",
+  "sourcePath": "contracts/openzeppelin/contracts/mocks/CountersImpl.sol",
+  "type": "contract"
+}

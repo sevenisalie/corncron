@@ -1,0 +1,7994 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "callback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract ReentrancyAttack",
+          "name": "attacker",
+          "type": "address"
+        }
+      ],
+      "name": "countAndCall",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "n",
+          "type": "uint256"
+        }
+      ],
+      "name": "countLocalRecursive",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "n",
+          "type": "uint256"
+        }
+      ],
+      "name": "countThisRecursive",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "counter",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "106": "contracts/openzeppelin/contracts/utils/ReentrancyGuard.sol",
+    "65": "contracts/openzeppelin/contracts/mocks/ReentrancyAttack.sol",
+    "66": "contracts/openzeppelin/contracts/mocks/ReentrancyMock.sol",
+    "8": "contracts/openzeppelin/contracts/GSN/Context.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/openzeppelin/contracts/mocks/ReentrancyMock.sol",
+    "exportedSymbols": {
+      "ReentrancyMock": [
+        11509
+      ]
+    },
+    "id": 11510,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 11392,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:66"
+      },
+      {
+        "absolutePath": "contracts/openzeppelin/contracts/utils/ReentrancyGuard.sol",
+        "file": "../utils/ReentrancyGuard.sol",
+        "id": 11393,
+        "nodeType": "ImportDirective",
+        "scope": 11510,
+        "sourceUnit": 18315,
+        "src": "25:38:66",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "contracts/openzeppelin/contracts/mocks/ReentrancyAttack.sol",
+        "file": "./ReentrancyAttack.sol",
+        "id": 11394,
+        "nodeType": "ImportDirective",
+        "scope": 11510,
+        "sourceUnit": 11391,
+        "src": "64:32:66",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 11395,
+              "name": "ReentrancyGuard",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 18314,
+              "src": "125:15:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ReentrancyGuard_$18314",
+                "typeString": "contract ReentrancyGuard"
+              }
+            },
+            "id": 11396,
+            "nodeType": "InheritanceSpecifier",
+            "src": "125:15:66"
+          }
+        ],
+        "contractDependencies": [
+          18314
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 11509,
+        "linearizedBaseContracts": [
+          11509,
+          18314
+        ],
+        "name": "ReentrancyMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "61bc221a",
+            "id": 11398,
+            "mutability": "mutable",
+            "name": "counter",
+            "nodeType": "VariableDeclaration",
+            "overrides": null,
+            "scope": 11509,
+            "src": "147:22:66",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 11397,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "147:7:66",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 11405,
+              "nodeType": "Block",
+              "src": "198:28:66",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 11403,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 11401,
+                      "name": "counter",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11398,
+                      "src": "208:7:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 11402,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "218:1:66",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "208:11:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 11404,
+                  "nodeType": "ExpressionStatement",
+                  "src": "208:11:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 11406,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11399,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "188:2:66"
+            },
+            "returnParameters": {
+              "id": 11400,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "198:0:66"
+            },
+            "scope": 11509,
+            "src": "176:50:66",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 11414,
+              "nodeType": "Block",
+              "src": "274:25:66",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 11411,
+                      "name": "_count",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11508,
+                      "src": "284:6:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 11412,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "284:8:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 11413,
+                  "nodeType": "ExpressionStatement",
+                  "src": "284:8:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "083b2732",
+            "id": 11415,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 11409,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 11408,
+                  "name": "nonReentrant",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 18313,
+                  "src": "261:12:66",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "261:12:66"
+              }
+            ],
+            "name": "callback",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11407,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "249:2:66"
+            },
+            "returnParameters": {
+              "id": 11410,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "274:0:66"
+            },
+            "scope": 11509,
+            "src": "232:67:66",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 11436,
+              "nodeType": "Block",
+              "src": "365:100:66",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 11424,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 11422,
+                      "name": "n",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11417,
+                      "src": "379:1:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 11423,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "383:1:66",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "379:5:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 11435,
+                  "nodeType": "IfStatement",
+                  "src": "375:84:66",
+                  "trueBody": {
+                    "id": 11434,
+                    "nodeType": "Block",
+                    "src": "386:73:66",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 11425,
+                            "name": "_count",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11508,
+                            "src": "400:6:66",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                              "typeString": "function ()"
+                            }
+                          },
+                          "id": 11426,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "400:8:66",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 11427,
+                        "nodeType": "ExpressionStatement",
+                        "src": "400:8:66"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "id": 11431,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "leftExpression": {
+                                "argumentTypes": null,
+                                "id": 11429,
+                                "name": "n",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 11417,
+                                "src": "442:1:66",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "nodeType": "BinaryOperation",
+                              "operator": "-",
+                              "rightExpression": {
+                                "argumentTypes": null,
+                                "hexValue": "31",
+                                "id": 11430,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "kind": "number",
+                                "lValueRequested": false,
+                                "nodeType": "Literal",
+                                "src": "446:1:66",
+                                "subdenomination": null,
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_rational_1_by_1",
+                                  "typeString": "int_const 1"
+                                },
+                                "value": "1"
+                              },
+                              "src": "442:5:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              }
+                            ],
+                            "id": 11428,
+                            "name": "countLocalRecursive",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11437,
+                            "src": "422:19:66",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_nonpayable$_t_uint256_$returns$__$",
+                              "typeString": "function (uint256)"
+                            }
+                          },
+                          "id": 11432,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "422:26:66",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 11433,
+                        "nodeType": "ExpressionStatement",
+                        "src": "422:26:66"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "96ffa690",
+            "id": 11437,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 11420,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 11419,
+                  "name": "nonReentrant",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 18313,
+                  "src": "352:12:66",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "352:12:66"
+              }
+            ],
+            "name": "countLocalRecursive",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11418,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11417,
+                  "mutability": "mutable",
+                  "name": "n",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11437,
+                  "src": "334:9:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11416,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "334:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "333:11:66"
+            },
+            "returnParameters": {
+              "id": 11421,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "365:0:66"
+            },
+            "scope": 11509,
+            "src": "305:160:66",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 11473,
+              "nodeType": "Block",
+              "src": "530:297:66",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 11446,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 11444,
+                      "name": "n",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11439,
+                      "src": "544:1:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 11445,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "548:1:66",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "544:5:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 11472,
+                  "nodeType": "IfStatement",
+                  "src": "540:281:66",
+                  "trueBody": {
+                    "id": 11471,
+                    "nodeType": "Block",
+                    "src": "551:270:66",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [],
+                          "expression": {
+                            "argumentTypes": [],
+                            "id": 11447,
+                            "name": "_count",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 11508,
+                            "src": "565:6:66",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                              "typeString": "function ()"
+                            }
+                          },
+                          "id": 11448,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "565:8:66",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 11449,
+                        "nodeType": "ExpressionStatement",
+                        "src": "565:8:66"
+                      },
+                      {
+                        "assignments": [
+                          11451,
+                          null
+                        ],
+                        "declarations": [
+                          {
+                            "constant": false,
+                            "id": 11451,
+                            "mutability": "mutable",
+                            "name": "success",
+                            "nodeType": "VariableDeclaration",
+                            "overrides": null,
+                            "scope": 11471,
+                            "src": "651:12:66",
+                            "stateVariable": false,
+                            "storageLocation": "default",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bool",
+                              "typeString": "bool"
+                            },
+                            "typeName": {
+                              "id": 11450,
+                              "name": "bool",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "651:4:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              }
+                            },
+                            "value": null,
+                            "visibility": "internal"
+                          },
+                          null
+                        ],
+                        "id": 11465,
+                        "initialValue": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "hexValue": "636f756e74546869735265637572736976652875696e7432353629",
+                                  "id": 11459,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "string",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "711:29:66",
+                                  "subdenomination": null,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_stringliteral_8c5344fa6b010fdd5e2cff6c41f85eb27e8b457f2d042f418209d56095018878",
+                                    "typeString": "literal_string \"countThisRecursive(uint256)\""
+                                  },
+                                  "value": "countThisRecursive(uint256)"
+                                },
+                                {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "id": 11462,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "leftExpression": {
+                                    "argumentTypes": null,
+                                    "id": 11460,
+                                    "name": "n",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 11439,
+                                    "src": "742:1:66",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  },
+                                  "nodeType": "BinaryOperation",
+                                  "operator": "-",
+                                  "rightExpression": {
+                                    "argumentTypes": null,
+                                    "hexValue": "31",
+                                    "id": 11461,
+                                    "isConstant": false,
+                                    "isLValue": false,
+                                    "isPure": true,
+                                    "kind": "number",
+                                    "lValueRequested": false,
+                                    "nodeType": "Literal",
+                                    "src": "746:1:66",
+                                    "subdenomination": null,
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_rational_1_by_1",
+                                      "typeString": "int_const 1"
+                                    },
+                                    "value": "1"
+                                  },
+                                  "src": "742:5:66",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_stringliteral_8c5344fa6b010fdd5e2cff6c41f85eb27e8b457f2d042f418209d56095018878",
+                                    "typeString": "literal_string \"countThisRecursive(uint256)\""
+                                  },
+                                  {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  }
+                                ],
+                                "expression": {
+                                  "argumentTypes": null,
+                                  "id": 11457,
+                                  "name": "abi",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": -1,
+                                  "src": "687:3:66",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_magic_abi",
+                                    "typeString": "abi"
+                                  }
+                                },
+                                "id": 11458,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "memberName": "encodeWithSignature",
+                                "nodeType": "MemberAccess",
+                                "referencedDeclaration": null,
+                                "src": "687:23:66",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_function_abiencodewithsignature_pure$_t_string_memory_ptr_$returns$_t_bytes_memory_ptr_$",
+                                  "typeString": "function (string memory) pure returns (bytes memory)"
+                                }
+                              },
+                              "id": 11463,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "functionCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "687:61:66",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bytes_memory_ptr",
+                                "typeString": "bytes memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "id": 11454,
+                                  "name": "this",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": -28,
+                                  "src": "676:4:66",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_ReentrancyMock_$11509",
+                                    "typeString": "contract ReentrancyMock"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_contract$_ReentrancyMock_$11509",
+                                    "typeString": "contract ReentrancyMock"
+                                  }
+                                ],
+                                "id": 11453,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "nodeType": "ElementaryTypeNameExpression",
+                                "src": "668:7:66",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_address_$",
+                                  "typeString": "type(address)"
+                                },
+                                "typeName": {
+                                  "id": 11452,
+                                  "name": "address",
+                                  "nodeType": "ElementaryTypeName",
+                                  "src": "668:7:66",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": null,
+                                    "typeString": null
+                                  }
+                                }
+                              },
+                              "id": 11455,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "668:13:66",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "id": 11456,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "call",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "668:18:66",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_barecall_payable$_t_bytes_memory_ptr_$returns$_t_bool_$_t_bytes_memory_ptr_$",
+                              "typeString": "function (bytes memory) payable returns (bool,bytes memory)"
+                            }
+                          },
+                          "id": 11464,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "668:81:66",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$_t_bool_$_t_bytes_memory_ptr_$",
+                            "typeString": "tuple(bool,bytes memory)"
+                          }
+                        },
+                        "nodeType": "VariableDeclarationStatement",
+                        "src": "650:99:66"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 11467,
+                              "name": "success",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 11451,
+                              "src": "771:7:66",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              }
+                            },
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "5265656e7472616e63794d6f636b3a206661696c65642063616c6c",
+                              "id": 11468,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "780:29:66",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_6e7df6a41596369ff81d71c1a274a01b76010e7a5848023b008a2b13b15462a6",
+                                "typeString": "literal_string \"ReentrancyMock: failed call\""
+                              },
+                              "value": "ReentrancyMock: failed call"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              {
+                                "typeIdentifier": "t_stringliteral_6e7df6a41596369ff81d71c1a274a01b76010e7a5848023b008a2b13b15462a6",
+                                "typeString": "literal_string \"ReentrancyMock: failed call\""
+                              }
+                            ],
+                            "id": 11466,
+                            "name": "require",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [
+                              -18,
+                              -18
+                            ],
+                            "referencedDeclaration": -18,
+                            "src": "763:7:66",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                              "typeString": "function (bool,string memory) pure"
+                            }
+                          },
+                          "id": 11469,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "763:47:66",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 11470,
+                        "nodeType": "ExpressionStatement",
+                        "src": "763:47:66"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "8c5344fa",
+            "id": 11474,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 11442,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 11441,
+                  "name": "nonReentrant",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 18313,
+                  "src": "517:12:66",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "517:12:66"
+              }
+            ],
+            "name": "countThisRecursive",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11440,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11439,
+                  "mutability": "mutable",
+                  "name": "n",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11474,
+                  "src": "499:9:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 11438,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "499:7:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "498:11:66"
+            },
+            "returnParameters": {
+              "id": 11443,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "530:0:66"
+            },
+            "scope": 11509,
+            "src": "471:356:66",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 11499,
+              "nodeType": "Block",
+              "src": "902:115:66",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 11481,
+                      "name": "_count",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11508,
+                      "src": "912:6:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 11482,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "912:8:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 11483,
+                  "nodeType": "ExpressionStatement",
+                  "src": "912:8:66"
+                },
+                {
+                  "assignments": [
+                    11485
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 11485,
+                      "mutability": "mutable",
+                      "name": "func",
+                      "nodeType": "VariableDeclaration",
+                      "overrides": null,
+                      "scope": 11499,
+                      "src": "930:11:66",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      },
+                      "typeName": {
+                        "id": 11484,
+                        "name": "bytes4",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "930:6:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 11492,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "hexValue": "63616c6c6261636b2829",
+                            "id": 11489,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "string",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "961:12:66",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_stringliteral_083b2732f78169bfaad6b407fa338cc97d697ed69d3915a18239cc111d51a402",
+                              "typeString": "literal_string \"callback()\""
+                            },
+                            "value": "callback()"
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_stringliteral_083b2732f78169bfaad6b407fa338cc97d697ed69d3915a18239cc111d51a402",
+                              "typeString": "literal_string \"callback()\""
+                            }
+                          ],
+                          "id": 11488,
+                          "name": "keccak256",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -8,
+                          "src": "951:9:66",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                            "typeString": "function (bytes memory) pure returns (bytes32)"
+                          }
+                        },
+                        "id": 11490,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "951:23:66",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      ],
+                      "id": 11487,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "944:6:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_bytes4_$",
+                        "typeString": "type(bytes4)"
+                      },
+                      "typeName": {
+                        "id": 11486,
+                        "name": "bytes4",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "944:6:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": null,
+                          "typeString": null
+                        }
+                      }
+                    },
+                    "id": 11491,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "944:31:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "930:45:66"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 11496,
+                        "name": "func",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11485,
+                        "src": "1005:4:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 11493,
+                        "name": "attacker",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11476,
+                        "src": "985:8:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ReentrancyAttack_$11390",
+                          "typeString": "contract ReentrancyAttack"
+                        }
+                      },
+                      "id": 11495,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "callSender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11389,
+                      "src": "985:19:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_bytes4_$returns$__$",
+                        "typeString": "function (bytes4) external"
+                      }
+                    },
+                    "id": 11497,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "985:25:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 11498,
+                  "nodeType": "ExpressionStatement",
+                  "src": "985:25:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "b672ad8b",
+            "id": 11500,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 11479,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 11478,
+                  "name": "nonReentrant",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 18313,
+                  "src": "889:12:66",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "889:12:66"
+              }
+            ],
+            "name": "countAndCall",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11477,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11476,
+                  "mutability": "mutable",
+                  "name": "attacker",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 11500,
+                  "src": "855:25:66",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ReentrancyAttack_$11390",
+                    "typeString": "contract ReentrancyAttack"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 11475,
+                    "name": "ReentrancyAttack",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 11390,
+                    "src": "855:16:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ReentrancyAttack_$11390",
+                      "typeString": "contract ReentrancyAttack"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "854:27:66"
+            },
+            "returnParameters": {
+              "id": 11480,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "902:0:66"
+            },
+            "scope": 11509,
+            "src": "833:184:66",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 11507,
+              "nodeType": "Block",
+              "src": "1049:29:66",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 11505,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 11503,
+                      "name": "counter",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 11398,
+                      "src": "1059:7:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 11504,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "1070:1:66",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "1059:12:66",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 11506,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1059:12:66"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 11508,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_count",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 11501,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1038:2:66"
+            },
+            "returnParameters": {
+              "id": 11502,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1049:0:66"
+            },
+            "scope": 11509,
+            "src": "1023:55:66",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "private"
+          }
+        ],
+        "scope": 11510,
+        "src": "98:982:66"
+      }
+    ],
+    "src": "0:1081:66"
+  },
+  "bytecode": "608060405234801561001057600080fd5b506000805460ff191660019081178255556104a0806100306000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c8063083b27321461005c57806361bc221a146100665780638c5344fa1461008057806396ffa6901461009d578063b672ad8b146100ba575b600080fd5b6100646100e0565b005b61006e610146565b60408051918252519081900360200190f35b6100646004803603602081101561009657600080fd5b503561014c565b610064600480360360208110156100b357600080fd5b50356102e6565b610064600480360360208110156100d057600080fd5b50356001600160a01b031661034f565b60005460ff16610125576040805162461bcd60e51b815260206004820152601f602482015260008051602061044b833981519152604482015290519081900360640190fd5b6000805460ff19169055610137610440565b6000805460ff19166001179055565b60015481565b60005460ff16610191576040805162461bcd60e51b815260206004820152601f602482015260008051602061044b833981519152604482015290519081900360640190fd5b6000805460ff1916905580156102d6576101a9610440565b60408051600019830160248083019190915282518083039091018152604490910182526020810180516001600160e01b0316634629a27d60e11b17815291518151600093309392918291908083835b602083106102175780518252601f1990920191602091820191016101f8565b6001836020036101000a0380198251168184511680821785525050505050509050019150506000604051808303816000865af19150503d8060008114610279576040519150601f19603f3d011682016040523d82523d6000602084013e61027e565b606091505b50509050806102d4576040805162461bcd60e51b815260206004820152601b60248201527f5265656e7472616e63794d6f636b3a206661696c65642063616c6c0000000000604482015290519081900360640190fd5b505b506000805460ff19166001179055565b60005460ff1661032b576040805162461bcd60e51b815260206004820152601f602482015260008051602061044b833981519152604482015290519081900360640190fd5b6000805460ff1916905580156102d657610343610440565b6102d6600182036102e6565b60005460ff16610394576040805162461bcd60e51b815260206004820152601f602482015260008051602061044b833981519152604482015290519081900360640190fd5b6000805460ff191690556103a6610440565b60408051630a2df1ed60e01b815263041d939960e11b600482015290517f083b2732f78169bfaad6b407fa338cc97d697ed69d3915a18239cc111d51a402916001600160a01b03841691630a2df1ed9160248082019260009290919082900301818387803b15801561041757600080fd5b505af115801561042b573d6000803e3d6000fd5b50506000805460ff1916600117905550505050565b600180548101905556fe5265656e7472616e637947756172643a207265656e7472616e742063616c6c00a264697066735822122014bd59f78dcaffdebf31f29bf75b7d09002baa3ecc3aa7bb2e3790a61352ed3d64736f6c634300060c0033",
+  "bytecodeSha1": "9865e83104c5abd5d32781761c3c0f8b2b95843f",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.6.12+commit.27d51765"
+  },
+  "contractName": "ReentrancyMock",
+  "coverageMap": {
+    "branches": {
+      "106": {
+        "ReentrancyMock.countAndCall": {
+          "11": [
+            1797,
+            1808,
+            true
+          ]
+        }
+      },
+      "65": {},
+      "66": {
+        "ReentrancyMock.countLocalRecursive": {
+          "10": [
+            379,
+            384,
+            false
+          ]
+        },
+        "ReentrancyMock.countThisRecursive": {
+          "8": [
+            544,
+            549,
+            false
+          ],
+          "9": [
+            771,
+            778,
+            true
+          ]
+        }
+      },
+      "8": {}
+    },
+    "statements": {
+      "106": {},
+      "65": {},
+      "66": {
+        "ReentrancyMock._count": {
+          "7": [
+            1059,
+            1071
+          ]
+        },
+        "ReentrancyMock.callback": {
+          "0": [
+            284,
+            292
+          ]
+        },
+        "ReentrancyMock.countAndCall": {
+          "5": [
+            912,
+            920
+          ],
+          "6": [
+            985,
+            1010
+          ]
+        },
+        "ReentrancyMock.countLocalRecursive": {
+          "3": [
+            400,
+            408
+          ],
+          "4": [
+            422,
+            448
+          ]
+        },
+        "ReentrancyMock.countThisRecursive": {
+          "1": [
+            565,
+            573
+          ],
+          "2": [
+            763,
+            810
+          ]
+        }
+      },
+      "8": {}
+    }
+  },
+  "dependencies": [
+    "Context",
+    "ReentrancyAttack",
+    "ReentrancyGuard"
+  ],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100575760003560e01c8063083b27321461005c57806361bc221a146100665780638c5344fa1461008057806396ffa6901461009d578063b672ad8b146100ba575b600080fd5b6100646100e0565b005b61006e610146565b60408051918252519081900360200190f35b6100646004803603602081101561009657600080fd5b503561014c565b610064600480360360208110156100b357600080fd5b50356102e6565b610064600480360360208110156100d057600080fd5b50356001600160a01b031661034f565b60005460ff16610125576040805162461bcd60e51b815260206004820152601f602482015260008051602061044b833981519152604482015290519081900360640190fd5b6000805460ff19169055610137610440565b6000805460ff19166001179055565b60015481565b60005460ff16610191576040805162461bcd60e51b815260206004820152601f602482015260008051602061044b833981519152604482015290519081900360640190fd5b6000805460ff1916905580156102d6576101a9610440565b60408051600019830160248083019190915282518083039091018152604490910182526020810180516001600160e01b0316634629a27d60e11b17815291518151600093309392918291908083835b602083106102175780518252601f1990920191602091820191016101f8565b6001836020036101000a0380198251168184511680821785525050505050509050019150506000604051808303816000865af19150503d8060008114610279576040519150601f19603f3d011682016040523d82523d6000602084013e61027e565b606091505b50509050806102d4576040805162461bcd60e51b815260206004820152601b60248201527f5265656e7472616e63794d6f636b3a206661696c65642063616c6c0000000000604482015290519081900360640190fd5b505b506000805460ff19166001179055565b60005460ff1661032b576040805162461bcd60e51b815260206004820152601f602482015260008051602061044b833981519152604482015290519081900360640190fd5b6000805460ff1916905580156102d657610343610440565b6102d6600182036102e6565b60005460ff16610394576040805162461bcd60e51b815260206004820152601f602482015260008051602061044b833981519152604482015290519081900360640190fd5b6000805460ff191690556103a6610440565b60408051630a2df1ed60e01b815263041d939960e11b600482015290517f083b2732f78169bfaad6b407fa338cc97d697ed69d3915a18239cc111d51a402916001600160a01b03841691630a2df1ed9160248082019260009290919082900301818387803b15801561041757600080fd5b505af115801561042b573d6000803e3d6000fd5b50506000805460ff1916600117905550505050565b600180548101905556fe5265656e7472616e637947756172643a207265656e7472616e742063616c6c00a264697066735822122014bd59f78dcaffdebf31f29bf75b7d09002baa3ecc3aa7bb2e3790a61352ed3d64736f6c634300060c0033",
+  "deployedSourceMap": "98:982:66:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;232:67;;;:::i;:::-;;147:22;;;:::i;:::-;;;;;;;;;;;;;;;;471:356;;;;;;;;;;;;;;;;-1:-1:-1;471:356:66;;:::i;305:160::-;;;;;;;;;;;;;;;;-1:-1:-1;305:160:66;;:::i;833:184::-;;;;;;;;;;;;;;;;-1:-1:-1;833:184:66;-1:-1:-1;;;;;833:184:66;;:::i;232:67::-;1797:11:106;;;;1789:55;;;;;-1:-1:-1;;;1789:55:106;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;1789:55:106;;;;;;;;;;;;;;;1933:5;1919:19;;-1:-1:-1;;1919:19:106;;;284:8:66::1;:6;:8::i;:::-;2093:11:106::0;:18;;-1:-1:-1;;2093:18:106;2107:4;2093:18;;;232:67:66:o;147:22::-;;;;:::o;471:356::-;1797:11:106;;;;1789:55;;;;;-1:-1:-1;;;1789:55:106;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;1789:55:106;;;;;;;;;;;;;;;1933:5;1919:19;;-1:-1:-1;;1919:19:106;;;544:5:66;;540:281:::1;;565:8;:6;:8::i;:::-;687:61;::::0;;-1:-1:-1;;742:5:66;;687:61:::1;::::0;;::::1;::::0;;;;;;;;;;;;;;;;;;;;::::1;::::0;::::1;::::0;;-1:-1:-1;;;;;687:61:66::1;-1:-1:-1::0;;;687:61:66::1;::::0;;668:81;;;;651:12:::1;::::0;676:4:::1;::::0;687:61;668:81;;;687:61;668:81;;687:61;668:81:::1;;;;;;::::0;;;;-1:-1:-1;;668:81:66;;;;::::1;::::0;;::::1;::::0;::::1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;650:99;;;771:7;763:47;;;::::0;;-1:-1:-1;;;763:47:66;;::::1;;::::0;::::1;::::0;::::1;::::0;;;;::::1;::::0;;;;;;;;;;;;;::::1;;540:281;;-1:-1:-1::0;2093:11:106;:18;;-1:-1:-1;;2093:18:106;2107:4;2093:18;;;471:356:66:o;305:160::-;1797:11:106;;;;1789:55;;;;;-1:-1:-1;;;1789:55:106;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;1789:55:106;;;;;;;;;;;;;;;1933:5;1919:19;;-1:-1:-1;;1919:19:106;;;379:5:66;;375:84:::1;;400:8;:6;:8::i;:::-;422:26;446:1;442;:5;422:19;:26::i;833:184::-:0;1797:11:106;;;;1789:55;;;;;-1:-1:-1;;;1789:55:106;;;;;;;;;;;;-1:-1:-1;;;;;;;;;;;1789:55:106;;;;;;;;;;;;;;;1933:5;1919:19;;-1:-1:-1;;1919:19:106;;;912:8:66::1;:6;:8::i;:::-;985:25;::::0;;-1:-1:-1;;;985:25:66;;-1:-1:-1;;;985:25:66::1;::::0;::::1;::::0;;;951:23:::1;::::0;-1:-1:-1;;;;;985:19:66;::::1;::::0;::::1;::::0;:25;;;;;930:11:::1;::::0;985:25;;;;;;;;930:11;985:19;:25;::::1;;::::0;::::1;;;;::::0;::::1;;;;;;;;;;;;::::0;::::1;;;;;-1:-1:-1::0;;2093:11:106;:18;;-1:-1:-1;;2093:18:106;2107:4;2093:18;;;-1:-1:-1;;;;833:184:66:o;1023:55::-;1070:1;1059:12;;;;;;1023:55::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    98,
+    1080
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x57 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x83B2732 EQ PUSH2 0x5C JUMPI DUP1 PUSH4 0x61BC221A EQ PUSH2 0x66 JUMPI DUP1 PUSH4 0x8C5344FA EQ PUSH2 0x80 JUMPI DUP1 PUSH4 0x96FFA690 EQ PUSH2 0x9D JUMPI DUP1 PUSH4 0xB672AD8B EQ PUSH2 0xBA JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x64 PUSH2 0xE0 JUMP JUMPDEST STOP JUMPDEST PUSH2 0x6E PUSH2 0x146 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD SWAP2 DUP3 MSTORE MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x20 ADD SWAP1 RETURN JUMPDEST PUSH2 0x64 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0x96 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH2 0x14C JUMP JUMPDEST PUSH2 0x64 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0xB3 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH2 0x2E6 JUMP JUMPDEST PUSH2 0x64 PUSH1 0x4 DUP1 CALLDATASIZE SUB PUSH1 0x20 DUP2 LT ISZERO PUSH2 0xD0 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND PUSH2 0x34F JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0xFF AND PUSH2 0x125 JUMPI PUSH1 0x40 DUP1 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x1F PUSH1 0x24 DUP3 ADD MSTORE PUSH1 0x0 DUP1 MLOAD PUSH1 0x20 PUSH2 0x44B DUP4 CODECOPY DUP2 MLOAD SWAP2 MSTORE PUSH1 0x44 DUP3 ADD MSTORE SWAP1 MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x64 ADD SWAP1 REVERT JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0xFF NOT AND SWAP1 SSTORE PUSH2 0x137 PUSH2 0x440 JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0xFF NOT AND PUSH1 0x1 OR SWAP1 SSTORE JUMP JUMPDEST PUSH1 0x1 SLOAD DUP2 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0xFF AND PUSH2 0x191 JUMPI PUSH1 0x40 DUP1 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x1F PUSH1 0x24 DUP3 ADD MSTORE PUSH1 0x0 DUP1 MLOAD PUSH1 0x20 PUSH2 0x44B DUP4 CODECOPY DUP2 MLOAD SWAP2 MSTORE PUSH1 0x44 DUP3 ADD MSTORE SWAP1 MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x64 ADD SWAP1 REVERT JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0xFF NOT AND SWAP1 SSTORE DUP1 ISZERO PUSH2 0x2D6 JUMPI PUSH2 0x1A9 PUSH2 0x440 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH1 0x0 NOT DUP4 ADD PUSH1 0x24 DUP1 DUP4 ADD SWAP2 SWAP1 SWAP2 MSTORE DUP3 MLOAD DUP1 DUP4 SUB SWAP1 SWAP2 ADD DUP2 MSTORE PUSH1 0x44 SWAP1 SWAP2 ADD DUP3 MSTORE PUSH1 0x20 DUP2 ADD DUP1 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xE0 SHL SUB AND PUSH4 0x4629A27D PUSH1 0xE1 SHL OR DUP2 MSTORE SWAP2 MLOAD DUP2 MLOAD PUSH1 0x0 SWAP4 ADDRESS SWAP4 SWAP3 SWAP2 DUP3 SWAP2 SWAP1 DUP1 DUP4 DUP4 JUMPDEST PUSH1 0x20 DUP4 LT PUSH2 0x217 JUMPI DUP1 MLOAD DUP3 MSTORE PUSH1 0x1F NOT SWAP1 SWAP3 ADD SWAP2 PUSH1 0x20 SWAP2 DUP3 ADD SWAP2 ADD PUSH2 0x1F8 JUMP JUMPDEST PUSH1 0x1 DUP4 PUSH1 0x20 SUB PUSH2 0x100 EXP SUB DUP1 NOT DUP3 MLOAD AND DUP2 DUP5 MLOAD AND DUP1 DUP3 OR DUP6 MSTORE POP POP POP POP POP POP SWAP1 POP ADD SWAP2 POP POP PUSH1 0x0 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 PUSH1 0x0 DUP7 GAS CALL SWAP2 POP POP RETURNDATASIZE DUP1 PUSH1 0x0 DUP2 EQ PUSH2 0x279 JUMPI PUSH1 0x40 MLOAD SWAP2 POP PUSH1 0x1F NOT PUSH1 0x3F RETURNDATASIZE ADD AND DUP3 ADD PUSH1 0x40 MSTORE RETURNDATASIZE DUP3 MSTORE RETURNDATASIZE PUSH1 0x0 PUSH1 0x20 DUP5 ADD RETURNDATACOPY PUSH2 0x27E JUMP JUMPDEST PUSH1 0x60 SWAP2 POP JUMPDEST POP POP SWAP1 POP DUP1 PUSH2 0x2D4 JUMPI PUSH1 0x40 DUP1 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x1B PUSH1 0x24 DUP3 ADD MSTORE PUSH32 0x5265656E7472616E63794D6F636B3A206661696C65642063616C6C0000000000 PUSH1 0x44 DUP3 ADD MSTORE SWAP1 MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x64 ADD SWAP1 REVERT JUMPDEST POP JUMPDEST POP PUSH1 0x0 DUP1 SLOAD PUSH1 0xFF NOT AND PUSH1 0x1 OR SWAP1 SSTORE JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0xFF AND PUSH2 0x32B JUMPI PUSH1 0x40 DUP1 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x1F PUSH1 0x24 DUP3 ADD MSTORE PUSH1 0x0 DUP1 MLOAD PUSH1 0x20 PUSH2 0x44B DUP4 CODECOPY DUP2 MLOAD SWAP2 MSTORE PUSH1 0x44 DUP3 ADD MSTORE SWAP1 MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x64 ADD SWAP1 REVERT JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0xFF NOT AND SWAP1 SSTORE DUP1 ISZERO PUSH2 0x2D6 JUMPI PUSH2 0x343 PUSH2 0x440 JUMP JUMPDEST PUSH2 0x2D6 PUSH1 0x1 DUP3 SUB PUSH2 0x2E6 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0xFF AND PUSH2 0x394 JUMPI PUSH1 0x40 DUP1 MLOAD PUSH3 0x461BCD PUSH1 0xE5 SHL DUP2 MSTORE PUSH1 0x20 PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x1F PUSH1 0x24 DUP3 ADD MSTORE PUSH1 0x0 DUP1 MLOAD PUSH1 0x20 PUSH2 0x44B DUP4 CODECOPY DUP2 MLOAD SWAP2 MSTORE PUSH1 0x44 DUP3 ADD MSTORE SWAP1 MLOAD SWAP1 DUP2 SWAP1 SUB PUSH1 0x64 ADD SWAP1 REVERT JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0xFF NOT AND SWAP1 SSTORE PUSH2 0x3A6 PUSH2 0x440 JUMP JUMPDEST PUSH1 0x40 DUP1 MLOAD PUSH4 0xA2DF1ED PUSH1 0xE0 SHL DUP2 MSTORE PUSH4 0x41D9399 PUSH1 0xE1 SHL PUSH1 0x4 DUP3 ADD MSTORE SWAP1 MLOAD PUSH32 0x83B2732F78169BFAAD6B407FA338CC97D697ED69D3915A18239CC111D51A402 SWAP2 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP5 AND SWAP2 PUSH4 0xA2DF1ED SWAP2 PUSH1 0x24 DUP1 DUP3 ADD SWAP3 PUSH1 0x0 SWAP3 SWAP1 SWAP2 SWAP1 DUP3 SWAP1 SUB ADD DUP2 DUP4 DUP8 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0x417 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH2 0x42B JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP PUSH1 0x0 DUP1 SLOAD PUSH1 0xFF NOT AND PUSH1 0x1 OR SWAP1 SSTORE POP POP POP POP JUMP JUMPDEST PUSH1 0x1 DUP1 SLOAD DUP2 ADD SWAP1 SSTORE JUMP INVALID MSTORE PUSH6 0x656E7472616E PUSH4 0x79477561 PUSH19 0x643A207265656E7472616E742063616C6C00A2 PUSH5 0x6970667358 0x22 SLT KECCAK256 EQ 0xBD MSIZE 0xF7 DUP14 0xCA SELFDESTRUCT 0xDE 0xBF BALANCE CALLCODE SWAP12 0xF7 JUMPDEST PUSH30 0x9002BAA3ECC3AA7BB2E3790A61352ED3D64736F6C634300060C00330000 ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "CALLVALUE",
+      "path": "66"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "ISZERO",
+      "path": "66"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "REVERT",
+      "path": "66"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "CALLDATASIZE",
+      "path": "66"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "LT",
+      "path": "66"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x57"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "CALLDATALOAD",
+      "path": "66"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "SHR",
+      "path": "66"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH4",
+      "path": "66",
+      "value": "0x83B2732"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "EQ",
+      "path": "66"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x5C"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH4",
+      "path": "66",
+      "value": "0x61BC221A"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "EQ",
+      "path": "66"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x66"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH4",
+      "path": "66",
+      "value": "0x8C5344FA"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "EQ",
+      "path": "66"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x80"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "66": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH4",
+      "path": "66",
+      "value": "0x96FFA690"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "EQ",
+      "path": "66"
+    },
+    "72": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x9D"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "77": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH4",
+      "path": "66",
+      "value": "0xB672AD8B"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "EQ",
+      "path": "66"
+    },
+    "83": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0xBA"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "88": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "90": {
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "91": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        98,
+        1080
+      ],
+      "op": "REVERT",
+      "path": "66"
+    },
+    "92": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        232,
+        299
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "93": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        232,
+        299
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x64"
+    },
+    "96": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        232,
+        299
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0xE0"
+    },
+    "99": {
+      "fn": "ReentrancyMock.callback",
+      "jump": "i",
+      "offset": [
+        232,
+        299
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "100": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        232,
+        299
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "101": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        232,
+        299
+      ],
+      "op": "STOP",
+      "path": "66"
+    },
+    "102": {
+      "offset": [
+        147,
+        169
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "103": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x6E"
+    },
+    "106": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x146"
+    },
+    "109": {
+      "fn": "ReentrancyMock.callback",
+      "jump": "i",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "110": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "111": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x40"
+    },
+    "113": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "114": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "115": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "116": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "117": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "118": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "119": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "120": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "121": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "122": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "SUB",
+      "path": "66"
+    },
+    "123": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x20"
+    },
+    "125": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "126": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "127": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "RETURN",
+      "path": "66"
+    },
+    "128": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "129": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x64"
+    },
+    "132": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x4"
+    },
+    "134": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "135": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "CALLDATASIZE",
+      "path": "66"
+    },
+    "136": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "SUB",
+      "path": "66"
+    },
+    "137": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x20"
+    },
+    "139": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "140": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "LT",
+      "path": "66"
+    },
+    "141": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "ISZERO",
+      "path": "66"
+    },
+    "142": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x96"
+    },
+    "145": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "146": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "148": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "149": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "REVERT",
+      "path": "66"
+    },
+    "150": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "151": {
+      "op": "POP"
+    },
+    "152": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "CALLDATALOAD",
+      "path": "66"
+    },
+    "153": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x14C"
+    },
+    "156": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "jump": "i",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "157": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "158": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x64"
+    },
+    "161": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x4"
+    },
+    "163": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "164": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "CALLDATASIZE",
+      "path": "66"
+    },
+    "165": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "SUB",
+      "path": "66"
+    },
+    "166": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x20"
+    },
+    "168": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "169": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "LT",
+      "path": "66"
+    },
+    "170": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "ISZERO",
+      "path": "66"
+    },
+    "171": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0xB3"
+    },
+    "174": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "175": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "177": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "178": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "REVERT",
+      "path": "66"
+    },
+    "179": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "180": {
+      "op": "POP"
+    },
+    "181": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "CALLDATALOAD",
+      "path": "66"
+    },
+    "182": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x2E6"
+    },
+    "185": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "jump": "i",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "186": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "187": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x64"
+    },
+    "190": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x4"
+    },
+    "192": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "193": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "CALLDATASIZE",
+      "path": "66"
+    },
+    "194": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "SUB",
+      "path": "66"
+    },
+    "195": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x20"
+    },
+    "197": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "198": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "LT",
+      "path": "66"
+    },
+    "199": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "ISZERO",
+      "path": "66"
+    },
+    "200": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0xD0"
+    },
+    "203": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "204": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "206": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "207": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "REVERT",
+      "path": "66"
+    },
+    "208": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "209": {
+      "op": "POP"
+    },
+    "210": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "CALLDATALOAD",
+      "path": "66"
+    },
+    "211": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "213": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "215": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "217": {
+      "op": "SHL"
+    },
+    "218": {
+      "op": "SUB"
+    },
+    "219": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "AND",
+      "path": "66"
+    },
+    "220": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x34F"
+    },
+    "223": {
+      "fn": "ReentrancyMock.countAndCall",
+      "jump": "i",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "224": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        232,
+        299
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "225": {
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x0"
+    },
+    "227": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "SLOAD",
+      "path": "106"
+    },
+    "228": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0xFF"
+    },
+    "230": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "AND",
+      "path": "106"
+    },
+    "231": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH2",
+      "path": "106",
+      "value": "0x125"
+    },
+    "234": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "JUMPI",
+      "path": "106"
+    },
+    "235": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x40"
+    },
+    "237": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP1",
+      "path": "106"
+    },
+    "238": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MLOAD",
+      "path": "106"
+    },
+    "239": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "243": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "245": {
+      "op": "SHL"
+    },
+    "246": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP2",
+      "path": "106"
+    },
+    "247": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "248": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x20"
+    },
+    "250": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x4"
+    },
+    "252": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP3",
+      "path": "106"
+    },
+    "253": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "254": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "255": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x1F"
+    },
+    "257": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x24"
+    },
+    "259": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP3",
+      "path": "106"
+    },
+    "260": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "261": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "262": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "264": {
+      "op": "DUP1"
+    },
+    "265": {
+      "op": "MLOAD"
+    },
+    "266": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "268": {
+      "op": "PUSH2",
+      "value": "0x44B"
+    },
+    "271": {
+      "op": "DUP4"
+    },
+    "272": {
+      "op": "CODECOPY"
+    },
+    "273": {
+      "op": "DUP2"
+    },
+    "274": {
+      "op": "MLOAD"
+    },
+    "275": {
+      "op": "SWAP2"
+    },
+    "276": {
+      "op": "MSTORE"
+    },
+    "277": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x44"
+    },
+    "279": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP3",
+      "path": "106"
+    },
+    "280": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "281": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "282": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "283": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MLOAD",
+      "path": "106"
+    },
+    "284": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "285": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP2",
+      "path": "106"
+    },
+    "286": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "287": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SUB",
+      "path": "106"
+    },
+    "288": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x64"
+    },
+    "290": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "291": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "292": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "REVERT",
+      "path": "106"
+    },
+    "293": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "JUMPDEST",
+      "path": "106"
+    },
+    "294": {
+      "offset": [
+        1933,
+        1938
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x0"
+    },
+    "296": {
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "DUP1",
+      "path": "106"
+    },
+    "297": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "SLOAD",
+      "path": "106"
+    },
+    "298": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "300": {
+      "op": "NOT"
+    },
+    "301": {
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "AND",
+      "path": "106"
+    },
+    "302": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "303": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "SSTORE",
+      "path": "106"
+    },
+    "304": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "statement": 0,
+      "value": "0x137"
+    },
+    "307": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        284,
+        290
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x440"
+    },
+    "310": {
+      "fn": "ReentrancyMock.callback",
+      "jump": "i",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "311": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        284,
+        292
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "312": {
+      "offset": [
+        2093,
+        2104
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x0"
+    },
+    "314": {
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "DUP1",
+      "path": "106"
+    },
+    "315": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "SLOAD",
+      "path": "106"
+    },
+    "316": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "318": {
+      "op": "NOT"
+    },
+    "319": {
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "AND",
+      "path": "106"
+    },
+    "320": {
+      "offset": [
+        2107,
+        2111
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x1"
+    },
+    "322": {
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "OR",
+      "path": "106"
+    },
+    "323": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "324": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "SSTORE",
+      "path": "106"
+    },
+    "325": {
+      "fn": "ReentrancyMock.callback",
+      "jump": "o",
+      "offset": [
+        232,
+        299
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "326": {
+      "offset": [
+        147,
+        169
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "327": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x1"
+    },
+    "329": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "SLOAD",
+      "path": "66"
+    },
+    "330": {
+      "fn": "ReentrancyMock.callback",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "331": {
+      "fn": "ReentrancyMock.callback",
+      "jump": "o",
+      "offset": [
+        147,
+        169
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "332": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "333": {
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x0"
+    },
+    "335": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "SLOAD",
+      "path": "106"
+    },
+    "336": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0xFF"
+    },
+    "338": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "AND",
+      "path": "106"
+    },
+    "339": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH2",
+      "path": "106",
+      "value": "0x191"
+    },
+    "342": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "JUMPI",
+      "path": "106"
+    },
+    "343": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x40"
+    },
+    "345": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP1",
+      "path": "106"
+    },
+    "346": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MLOAD",
+      "path": "106"
+    },
+    "347": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "351": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "353": {
+      "op": "SHL"
+    },
+    "354": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP2",
+      "path": "106"
+    },
+    "355": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "356": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x20"
+    },
+    "358": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x4"
+    },
+    "360": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP3",
+      "path": "106"
+    },
+    "361": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "362": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "363": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x1F"
+    },
+    "365": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x24"
+    },
+    "367": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP3",
+      "path": "106"
+    },
+    "368": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "369": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "370": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "372": {
+      "op": "DUP1"
+    },
+    "373": {
+      "op": "MLOAD"
+    },
+    "374": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "376": {
+      "op": "PUSH2",
+      "value": "0x44B"
+    },
+    "379": {
+      "op": "DUP4"
+    },
+    "380": {
+      "op": "CODECOPY"
+    },
+    "381": {
+      "op": "DUP2"
+    },
+    "382": {
+      "op": "MLOAD"
+    },
+    "383": {
+      "op": "SWAP2"
+    },
+    "384": {
+      "op": "MSTORE"
+    },
+    "385": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x44"
+    },
+    "387": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP3",
+      "path": "106"
+    },
+    "388": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "389": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "390": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "391": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MLOAD",
+      "path": "106"
+    },
+    "392": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "393": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP2",
+      "path": "106"
+    },
+    "394": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "395": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SUB",
+      "path": "106"
+    },
+    "396": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x64"
+    },
+    "398": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "399": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "400": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "REVERT",
+      "path": "106"
+    },
+    "401": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "JUMPDEST",
+      "path": "106"
+    },
+    "402": {
+      "offset": [
+        1933,
+        1938
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x0"
+    },
+    "404": {
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "DUP1",
+      "path": "106"
+    },
+    "405": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "SLOAD",
+      "path": "106"
+    },
+    "406": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "408": {
+      "op": "NOT"
+    },
+    "409": {
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "AND",
+      "path": "106"
+    },
+    "410": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "411": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "SSTORE",
+      "path": "106"
+    },
+    "412": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        544,
+        549
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "413": {
+      "branch": 8,
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        544,
+        549
+      ],
+      "op": "ISZERO",
+      "path": "66"
+    },
+    "414": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        540,
+        821
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x2D6"
+    },
+    "417": {
+      "branch": 8,
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        540,
+        821
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "418": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        565,
+        573
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "statement": 1,
+      "value": "0x1A9"
+    },
+    "421": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        565,
+        571
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x440"
+    },
+    "424": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "jump": "i",
+      "offset": [
+        565,
+        573
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "425": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        565,
+        573
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "426": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x40"
+    },
+    "428": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "429": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "430": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "432": {
+      "op": "NOT"
+    },
+    "433": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        742,
+        747
+      ],
+      "op": "DUP4",
+      "path": "66"
+    },
+    "434": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        742,
+        747
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "435": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x24"
+    },
+    "437": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "438": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "DUP4",
+      "path": "66"
+    },
+    "439": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "440": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "441": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "442": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "443": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "444": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "445": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "446": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "447": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "DUP4",
+      "path": "66"
+    },
+    "448": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "SUB",
+      "path": "66"
+    },
+    "449": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "450": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "451": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "452": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "453": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "454": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x44"
+    },
+    "456": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "457": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "458": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "459": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "460": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "461": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x20"
+    },
+    "463": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "464": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "465": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "466": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "467": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "469": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "471": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "473": {
+      "op": "SHL"
+    },
+    "474": {
+      "op": "SUB"
+    },
+    "475": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "AND",
+      "path": "66"
+    },
+    "476": {
+      "op": "PUSH4",
+      "value": "0x4629A27D"
+    },
+    "481": {
+      "op": "PUSH1",
+      "value": "0xE1"
+    },
+    "483": {
+      "op": "SHL"
+    },
+    "484": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "OR",
+      "path": "66"
+    },
+    "485": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "486": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "487": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "488": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "489": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "490": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "491": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        651,
+        663
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "493": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        651,
+        663
+      ],
+      "op": "SWAP4",
+      "path": "66"
+    },
+    "494": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        676,
+        680
+      ],
+      "op": "ADDRESS",
+      "path": "66"
+    },
+    "495": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        676,
+        680
+      ],
+      "op": "SWAP4",
+      "path": "66"
+    },
+    "496": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "SWAP3",
+      "path": "66"
+    },
+    "497": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "498": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "499": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "500": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "501": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "502": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP4",
+      "path": "66"
+    },
+    "503": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        687,
+        748
+      ],
+      "op": "DUP4",
+      "path": "66"
+    },
+    "504": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "505": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x20"
+    },
+    "507": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP4",
+      "path": "66"
+    },
+    "508": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "LT",
+      "path": "66"
+    },
+    "509": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x217"
+    },
+    "512": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "513": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "514": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "515": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "516": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "517": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "519": {
+      "op": "NOT"
+    },
+    "520": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "521": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP3",
+      "path": "66"
+    },
+    "522": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "523": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "524": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x20"
+    },
+    "526": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "527": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "528": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "529": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "530": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "531": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x1F8"
+    },
+    "534": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "535": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "536": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x1"
+    },
+    "538": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP4",
+      "path": "66"
+    },
+    "539": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x20"
+    },
+    "541": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SUB",
+      "path": "66"
+    },
+    "542": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x100"
+    },
+    "545": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "EXP",
+      "path": "66"
+    },
+    "546": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SUB",
+      "path": "66"
+    },
+    "547": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "548": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "NOT",
+      "path": "66"
+    },
+    "549": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "550": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "551": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "AND",
+      "path": "66"
+    },
+    "552": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "553": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP5",
+      "path": "66"
+    },
+    "554": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "555": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "AND",
+      "path": "66"
+    },
+    "556": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "557": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "558": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "OR",
+      "path": "66"
+    },
+    "559": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP6",
+      "path": "66"
+    },
+    "560": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "561": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "562": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "563": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "564": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "565": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "566": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "567": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "568": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "569": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "570": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "571": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "572": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "573": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "575": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x40"
+    },
+    "577": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "578": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "579": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP4",
+      "path": "66"
+    },
+    "580": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SUB",
+      "path": "66"
+    },
+    "581": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "582": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "584": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP7",
+      "path": "66"
+    },
+    "585": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "GAS",
+      "path": "66"
+    },
+    "586": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "CALL",
+      "path": "66"
+    },
+    "587": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "588": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "589": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "590": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "66"
+    },
+    "591": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "592": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "594": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "595": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "EQ",
+      "path": "66"
+    },
+    "596": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x279"
+    },
+    "599": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "600": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x40"
+    },
+    "602": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "603": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "604": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "605": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x1F"
+    },
+    "607": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "NOT",
+      "path": "66"
+    },
+    "608": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x3F"
+    },
+    "610": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "66"
+    },
+    "611": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "612": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "AND",
+      "path": "66"
+    },
+    "613": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "614": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "615": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x40"
+    },
+    "617": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "618": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "66"
+    },
+    "619": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "620": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "621": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "66"
+    },
+    "622": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "624": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x20"
+    },
+    "626": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "DUP5",
+      "path": "66"
+    },
+    "627": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "628": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "66"
+    },
+    "629": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x27E"
+    },
+    "632": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "633": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "634": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x60"
+    },
+    "636": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "637": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "638": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "639": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        668,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "640": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        650,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "641": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        650,
+        749
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "642": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        650,
+        749
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "643": {
+      "branch": 9,
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        771,
+        778
+      ],
+      "op": "DUP1",
+      "path": "66",
+      "statement": 2
+    },
+    "644": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x2D4"
+    },
+    "647": {
+      "branch": 9,
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "648": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x40"
+    },
+    "650": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "651": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "652": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "656": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "658": {
+      "op": "SHL"
+    },
+    "659": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "660": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "661": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x20"
+    },
+    "663": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x4"
+    },
+    "665": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "666": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "667": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "668": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x1B"
+    },
+    "670": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x24"
+    },
+    "672": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "673": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "674": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "675": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "PUSH32",
+      "path": "66",
+      "value": "0x5265656E7472616E63794D6F636B3A206661696C65642063616C6C0000000000"
+    },
+    "708": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x44"
+    },
+    "710": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "711": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "712": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "713": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "714": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "715": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "716": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "717": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "718": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "SUB",
+      "path": "66"
+    },
+    "719": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x64"
+    },
+    "721": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "722": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "723": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "REVERT",
+      "path": "66"
+    },
+    "724": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        763,
+        810
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "725": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        540,
+        821
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "726": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        540,
+        821
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "727": {
+      "op": "POP"
+    },
+    "728": {
+      "offset": [
+        2093,
+        2104
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x0"
+    },
+    "730": {
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "DUP1",
+      "path": "106"
+    },
+    "731": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "SLOAD",
+      "path": "106"
+    },
+    "732": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "734": {
+      "op": "NOT"
+    },
+    "735": {
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "AND",
+      "path": "106"
+    },
+    "736": {
+      "offset": [
+        2107,
+        2111
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x1"
+    },
+    "738": {
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "OR",
+      "path": "106"
+    },
+    "739": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "740": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "SSTORE",
+      "path": "106"
+    },
+    "741": {
+      "fn": "ReentrancyMock.countThisRecursive",
+      "jump": "o",
+      "offset": [
+        471,
+        827
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "742": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        305,
+        465
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "743": {
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x0"
+    },
+    "745": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "SLOAD",
+      "path": "106"
+    },
+    "746": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0xFF"
+    },
+    "748": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "AND",
+      "path": "106"
+    },
+    "749": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH2",
+      "path": "106",
+      "value": "0x32B"
+    },
+    "752": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "JUMPI",
+      "path": "106"
+    },
+    "753": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x40"
+    },
+    "755": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP1",
+      "path": "106"
+    },
+    "756": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MLOAD",
+      "path": "106"
+    },
+    "757": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "761": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "763": {
+      "op": "SHL"
+    },
+    "764": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP2",
+      "path": "106"
+    },
+    "765": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "766": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x20"
+    },
+    "768": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x4"
+    },
+    "770": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP3",
+      "path": "106"
+    },
+    "771": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "772": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "773": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x1F"
+    },
+    "775": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x24"
+    },
+    "777": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP3",
+      "path": "106"
+    },
+    "778": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "779": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "780": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "782": {
+      "op": "DUP1"
+    },
+    "783": {
+      "op": "MLOAD"
+    },
+    "784": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "786": {
+      "op": "PUSH2",
+      "value": "0x44B"
+    },
+    "789": {
+      "op": "DUP4"
+    },
+    "790": {
+      "op": "CODECOPY"
+    },
+    "791": {
+      "op": "DUP2"
+    },
+    "792": {
+      "op": "MLOAD"
+    },
+    "793": {
+      "op": "SWAP2"
+    },
+    "794": {
+      "op": "MSTORE"
+    },
+    "795": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x44"
+    },
+    "797": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP3",
+      "path": "106"
+    },
+    "798": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "799": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "800": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "801": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MLOAD",
+      "path": "106"
+    },
+    "802": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "803": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP2",
+      "path": "106"
+    },
+    "804": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "805": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SUB",
+      "path": "106"
+    },
+    "806": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x64"
+    },
+    "808": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "809": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "810": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "REVERT",
+      "path": "106"
+    },
+    "811": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "JUMPDEST",
+      "path": "106"
+    },
+    "812": {
+      "offset": [
+        1933,
+        1938
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x0"
+    },
+    "814": {
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "DUP1",
+      "path": "106"
+    },
+    "815": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "SLOAD",
+      "path": "106"
+    },
+    "816": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "818": {
+      "op": "NOT"
+    },
+    "819": {
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "AND",
+      "path": "106"
+    },
+    "820": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "821": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "SSTORE",
+      "path": "106"
+    },
+    "822": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        379,
+        384
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "823": {
+      "branch": 10,
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        379,
+        384
+      ],
+      "op": "ISZERO",
+      "path": "66"
+    },
+    "824": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        375,
+        459
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x2D6"
+    },
+    "827": {
+      "branch": 10,
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        375,
+        459
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "828": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        400,
+        408
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "statement": 3,
+      "value": "0x343"
+    },
+    "831": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        400,
+        406
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x440"
+    },
+    "834": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "jump": "i",
+      "offset": [
+        400,
+        408
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "835": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        400,
+        408
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "836": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        422,
+        448
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "statement": 4,
+      "value": "0x2D6"
+    },
+    "839": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        446,
+        447
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x1"
+    },
+    "841": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        442,
+        443
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "842": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        442,
+        447
+      ],
+      "op": "SUB",
+      "path": "66"
+    },
+    "843": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "offset": [
+        422,
+        441
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x2E6"
+    },
+    "846": {
+      "fn": "ReentrancyMock.countLocalRecursive",
+      "jump": "i",
+      "offset": [
+        422,
+        448
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "847": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "848": {
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x0"
+    },
+    "850": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "SLOAD",
+      "path": "106"
+    },
+    "851": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0xFF"
+    },
+    "853": {
+      "branch": 11,
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1797,
+        1808
+      ],
+      "op": "AND",
+      "path": "106"
+    },
+    "854": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH2",
+      "path": "106",
+      "value": "0x394"
+    },
+    "857": {
+      "branch": 11,
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "JUMPI",
+      "path": "106"
+    },
+    "858": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x40"
+    },
+    "860": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP1",
+      "path": "106"
+    },
+    "861": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MLOAD",
+      "path": "106"
+    },
+    "862": {
+      "op": "PUSH3",
+      "value": "0x461BCD"
+    },
+    "866": {
+      "op": "PUSH1",
+      "value": "0xE5"
+    },
+    "868": {
+      "op": "SHL"
+    },
+    "869": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP2",
+      "path": "106"
+    },
+    "870": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "871": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x20"
+    },
+    "873": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x4"
+    },
+    "875": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP3",
+      "path": "106"
+    },
+    "876": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "877": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "878": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x1F"
+    },
+    "880": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x24"
+    },
+    "882": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP3",
+      "path": "106"
+    },
+    "883": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "884": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "885": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "887": {
+      "op": "DUP1"
+    },
+    "888": {
+      "op": "MLOAD"
+    },
+    "889": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "891": {
+      "op": "PUSH2",
+      "value": "0x44B"
+    },
+    "894": {
+      "op": "DUP4"
+    },
+    "895": {
+      "op": "CODECOPY"
+    },
+    "896": {
+      "op": "DUP2"
+    },
+    "897": {
+      "op": "MLOAD"
+    },
+    "898": {
+      "op": "SWAP2"
+    },
+    "899": {
+      "op": "MSTORE"
+    },
+    "900": {
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x44"
+    },
+    "902": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP3",
+      "path": "106"
+    },
+    "903": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "904": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MSTORE",
+      "path": "106"
+    },
+    "905": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "906": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "MLOAD",
+      "path": "106"
+    },
+    "907": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "908": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "DUP2",
+      "path": "106"
+    },
+    "909": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "910": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SUB",
+      "path": "106"
+    },
+    "911": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x64"
+    },
+    "913": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "ADD",
+      "path": "106"
+    },
+    "914": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "915": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "REVERT",
+      "path": "106"
+    },
+    "916": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1789,
+        1844
+      ],
+      "op": "JUMPDEST",
+      "path": "106"
+    },
+    "917": {
+      "offset": [
+        1933,
+        1938
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x0"
+    },
+    "919": {
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "DUP1",
+      "path": "106"
+    },
+    "920": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "SLOAD",
+      "path": "106"
+    },
+    "921": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "923": {
+      "op": "NOT"
+    },
+    "924": {
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "AND",
+      "path": "106"
+    },
+    "925": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "926": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        1919,
+        1938
+      ],
+      "op": "SSTORE",
+      "path": "106"
+    },
+    "927": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        912,
+        920
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "statement": 5,
+      "value": "0x3A6"
+    },
+    "930": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        912,
+        918
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x440"
+    },
+    "933": {
+      "fn": "ReentrancyMock.countAndCall",
+      "jump": "i",
+      "offset": [
+        912,
+        920
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "934": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        912,
+        920
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "935": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "statement": 6,
+      "value": "0x40"
+    },
+    "937": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "938": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "939": {
+      "op": "PUSH4",
+      "value": "0xA2DF1ED"
+    },
+    "944": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "946": {
+      "op": "SHL"
+    },
+    "947": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "948": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "949": {
+      "op": "PUSH4",
+      "value": "0x41D9399"
+    },
+    "954": {
+      "op": "PUSH1",
+      "value": "0xE1"
+    },
+    "956": {
+      "op": "SHL"
+    },
+    "957": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x4"
+    },
+    "959": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "960": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "961": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "MSTORE",
+      "path": "66"
+    },
+    "962": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "963": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "MLOAD",
+      "path": "66"
+    },
+    "964": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        951,
+        974
+      ],
+      "op": "PUSH32",
+      "path": "66",
+      "value": "0x83B2732F78169BFAAD6B407FA338CC97D697ED69D3915A18239CC111D51A402"
+    },
+    "997": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        951,
+        974
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "998": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1000": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "1002": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "1004": {
+      "op": "SHL"
+    },
+    "1005": {
+      "op": "SUB"
+    },
+    "1006": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1004
+      ],
+      "op": "DUP5",
+      "path": "66"
+    },
+    "1007": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1004
+      ],
+      "op": "AND",
+      "path": "66"
+    },
+    "1008": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1004
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "1009": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1004
+      ],
+      "op": "PUSH4",
+      "path": "66",
+      "value": "0xA2DF1ED"
+    },
+    "1014": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1004
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "1015": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x24"
+    },
+    "1017": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "1018": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "1019": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "1020": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "SWAP3",
+      "path": "66"
+    },
+    "1021": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        930,
+        941
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "1023": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        930,
+        941
+      ],
+      "op": "SWAP3",
+      "path": "66"
+    },
+    "1024": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "1025": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "SWAP2",
+      "path": "66"
+    },
+    "1026": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "1027": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "DUP3",
+      "path": "66"
+    },
+    "1028": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "1029": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "SUB",
+      "path": "66"
+    },
+    "1030": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "1031": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "1032": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        930,
+        941
+      ],
+      "op": "DUP4",
+      "path": "66"
+    },
+    "1033": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1004
+      ],
+      "op": "DUP8",
+      "path": "66"
+    },
+    "1034": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "1035": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "EXTCODESIZE",
+      "path": "66"
+    },
+    "1036": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "ISZERO",
+      "path": "66"
+    },
+    "1037": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "1038": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "ISZERO",
+      "path": "66"
+    },
+    "1039": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x417"
+    },
+    "1042": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "1043": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "1045": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "1046": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "REVERT",
+      "path": "66"
+    },
+    "1047": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "1048": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "POP",
+      "path": "66"
+    },
+    "1049": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "GAS",
+      "path": "66"
+    },
+    "1050": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "CALL",
+      "path": "66"
+    },
+    "1051": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "ISZERO",
+      "path": "66"
+    },
+    "1052": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "1053": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "ISZERO",
+      "path": "66"
+    },
+    "1054": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "PUSH2",
+      "path": "66",
+      "value": "0x42B"
+    },
+    "1057": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "JUMPI",
+      "path": "66"
+    },
+    "1058": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "66"
+    },
+    "1059": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "1061": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "1062": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "66"
+    },
+    "1063": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "66"
+    },
+    "1064": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "value": "0x0"
+    },
+    "1066": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "REVERT",
+      "path": "66"
+    },
+    "1067": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        985,
+        1010
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "1068": {
+      "op": "POP"
+    },
+    "1069": {
+      "op": "POP"
+    },
+    "1070": {
+      "offset": [
+        2093,
+        2104
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x0"
+    },
+    "1072": {
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "DUP1",
+      "path": "106"
+    },
+    "1073": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "SLOAD",
+      "path": "106"
+    },
+    "1074": {
+      "op": "PUSH1",
+      "value": "0xFF"
+    },
+    "1076": {
+      "op": "NOT"
+    },
+    "1077": {
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "AND",
+      "path": "106"
+    },
+    "1078": {
+      "offset": [
+        2107,
+        2111
+      ],
+      "op": "PUSH1",
+      "path": "106",
+      "value": "0x1"
+    },
+    "1080": {
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "OR",
+      "path": "106"
+    },
+    "1081": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "SWAP1",
+      "path": "106"
+    },
+    "1082": {
+      "fn": "ReentrancyMock.countAndCall",
+      "offset": [
+        2093,
+        2111
+      ],
+      "op": "SSTORE",
+      "path": "106"
+    },
+    "1083": {
+      "op": "POP"
+    },
+    "1084": {
+      "op": "POP"
+    },
+    "1085": {
+      "op": "POP"
+    },
+    "1086": {
+      "op": "POP"
+    },
+    "1087": {
+      "fn": "ReentrancyMock.countAndCall",
+      "jump": "o",
+      "offset": [
+        833,
+        1017
+      ],
+      "op": "JUMP",
+      "path": "66"
+    },
+    "1088": {
+      "fn": "ReentrancyMock._count",
+      "offset": [
+        1023,
+        1078
+      ],
+      "op": "JUMPDEST",
+      "path": "66"
+    },
+    "1089": {
+      "fn": "ReentrancyMock._count",
+      "offset": [
+        1070,
+        1071
+      ],
+      "op": "PUSH1",
+      "path": "66",
+      "statement": 7,
+      "value": "0x1"
+    },
+    "1091": {
+      "fn": "ReentrancyMock._count",
+      "offset": [
+        1059,
+        1071
+      ],
+      "op": "DUP1",
+      "path": "66"
+    },
+    "1092": {
+      "fn": "ReentrancyMock._count",
+      "offset": [
+        1059,
+        1071
+      ],
+      "op": "SLOAD",
+      "path": "66"
+    },
+    "1093": {
+      "fn": "ReentrancyMock._count",
+      "offset": [
+        1059,
+        1071
+      ],
+      "op": "DUP2",
+      "path": "66"
+    },
+    "1094": {
+      "fn": "ReentrancyMock._count",
+      "offset": [
+        1059,
+        1071
+      ],
+      "op": "ADD",
+      "path": "66"
+    },
+    "1095": {
+      "fn": "ReentrancyMock._count",
+      "offset": [
+        1059,
+        1071
+      ],
+      "op": "SWAP1",
+      "path": "66"
+    },
+    "1096": {
+      "fn": "ReentrancyMock._count",
+      "offset": [
+        1059,
+        1071
+      ],
+      "op": "SSTORE",
+      "path": "66"
+    },
+    "1097": {
+      "fn": "ReentrancyMock._count",
+      "jump": "o",
+      "offset": [
+        1023,
+        1078
+      ],
+      "op": "JUMP",
+      "path": "66"
+    }
+  },
+  "sha1": "ec382d10286e1caad25a056833fd50f3abc6ee1f",
+  "source": "pragma solidity ^0.6.0;\n\nimport \"../utils/ReentrancyGuard.sol\";\nimport \"./ReentrancyAttack.sol\";\n\ncontract ReentrancyMock is ReentrancyGuard {\n    uint256 public counter;\n\n    constructor () public {\n        counter = 0;\n    }\n\n    function callback() external nonReentrant {\n        _count();\n    }\n\n    function countLocalRecursive(uint256 n) public nonReentrant {\n        if (n > 0) {\n            _count();\n            countLocalRecursive(n - 1);\n        }\n    }\n\n    function countThisRecursive(uint256 n) public nonReentrant {\n        if (n > 0) {\n            _count();\n            // solhint-disable-next-line avoid-low-level-calls\n            (bool success,) = address(this).call(abi.encodeWithSignature(\"countThisRecursive(uint256)\", n - 1));\n            require(success, \"ReentrancyMock: failed call\");\n        }\n    }\n\n    function countAndCall(ReentrancyAttack attacker) public nonReentrant {\n        _count();\n        bytes4 func = bytes4(keccak256(\"callback()\"));\n        attacker.callSender(func);\n    }\n\n    function _count() private {\n        counter += 1;\n    }\n}\n",
+  "sourceMap": "98:982:66:-:0;;;176:50;;;;;;;;;-1:-1:-1;1284:11:106;:18;;-1:-1:-1;;1284:18:106;1298:4;1284:18;;;;;208:11:66;98:982;;;;;;",
+  "sourcePath": "contracts/openzeppelin/contracts/mocks/ReentrancyMock.sol",
+  "type": "contract"
+}

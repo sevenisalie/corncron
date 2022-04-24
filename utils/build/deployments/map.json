@@ -1,0 +1,31 @@
+{
+  "137": {
+    "AAVEV3Strategy": [
+      "0xfC87AF07825F0Cf657B91984B79ED77C2704e238"
+    ],
+    "AccumulatorDistributorVault": [
+      "0x50050d02ac05d7d7d59d40d9808275c2BcF5e808"
+    ],
+    "Controller": [
+      "0x343c151D8244C64a7e676A42b50259cCfdB95c4A"
+    ],
+    "ControllerView": [
+      "0xf27CE4d7b89fe325f213B23cBE56FA4d156F4750"
+    ],
+    "LimitOrderVault": [
+      "0x7a5dE5fC5b11fD5eb23e8017F102655996370E21"
+    ],
+    "LimitWithStopVault": [
+      "0x73e8e5Cb25ac2c89DB8399DC327E37B27493E46E"
+    ],
+    "Resolver": [
+      "0x78cf04262Bdf239A1b8ac0A34EE500f9AdE86040"
+    ],
+    "SimpleStrategy": [
+      "0xfFb4a664550A80AdBbe651cff2261e373Eca9264"
+    ],
+    "StopLossVault": [
+      "0x40bfe5F67342b7B2b7E032ee12bE1c4266ae5B7a"
+    ]
+  }
+}
