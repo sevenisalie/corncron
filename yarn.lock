@@ -535,7 +535,13 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
-ethers@^5.6.4:
+"ethers-multicall@https://github.com/Limited-Liability-Developers/ethers-multicall.git":
+  version "0.2.3"
+  resolved "https://github.com/Limited-Liability-Developers/ethers-multicall.git#fd9e123ad6038a491df67576b0ad918655b3f695"
+  dependencies:
+    ethers "^5.0.0"
+
+ethers@^5.0.0, ethers@^5.6.4:
   version "5.6.4"
   resolved "https://registry.yarnpkg.com/ethers/-/ethers-5.6.4.tgz#23629e9a7d4bc5802dfb53d4da420d738744b53c"
   integrity sha512-62UIfxAQXdf67TeeOaoOoPctm5hUlYgfd0iW3wxfj7qRYKDcvvy0f+sJ3W2/Pyx77R8dblvejA8jokj+lS+ATQ==
