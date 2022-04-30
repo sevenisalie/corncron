@@ -223,7 +223,7 @@ const pools = [
     tokenEarnName: "COB",
     tokenEarnLogoName: "cornlogo",
     multiplier: "100x",
-    depositFee: "0.1%"
+    depositFee: "0%"
     },
     {
         pid: 14,
@@ -255,7 +255,7 @@ const pools = [
       tokenEarnName: "COB",
       tokenEarnLogoName: "cornlogo",
       multiplier: "100x",
-      depositFee: "0.1%"
+      depositFee: "0%"
       },
 ]
 
