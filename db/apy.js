@@ -62,7 +62,6 @@ const writeAllPoolData = async () => {
 const readLatestPoolData = async () => {
 try {    
     let lastDoc = (await Pools.find({}).sort({_id: -1}).limit(1))[0];
-    console.log(lastDoc);
     return lastDoc
     } catch (err) {console.log(err)}
 }

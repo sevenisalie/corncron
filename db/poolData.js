@@ -20,7 +20,6 @@ const fetchSigner = async () => {
     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY);
     
     const signer = wallet.connect(provider);
-    console.log(`connected to ${signer.address}`);
     
     return signer;
 };
@@ -40,8 +39,7 @@ const fetchContract = async (address, abi) => {
 const fetchBestLP = async (_token) => {
     try {
         const data = await fetchTokenLiquidityInfo(_token)
-        console.log("DARATA")
-        console.log(data)
+
         const nativeTokenLiquidity = data.map( (pool) => {
         const token0 = pool.token0
         const token1 = pool.token1
@@ -91,10 +89,7 @@ const fetchTokenLiquidityInfo = async (_token) => {
   
       const quoteToken = addresses.tokens.MATIC
       
-    //   if (_token.toLowerCase() == quoteToken.toLowerCase()) {
-    //       console.log("both token and quote token are the same")
-    //       return 1
-    //   }
+  
   
       //work it
       const quoteTokenMap = WHITELIST.map( async (quoteToken) => {
@@ -142,8 +137,7 @@ const fetchTokenLiquidityInfo = async (_token) => {
           return item !== undefined
       })
   
-      console.log("DARTA")
-      console.log(data)
+
       return data
 }
 
@@ -290,9 +284,18 @@ const getAPY = async (_poolTVL, _tokenPerBlock) => {
     const tokenPB = new BigNumber(_tokenPerBlock)
     const BPY = new BigNumber(15768000) //2s avg
 
-    const rewardPerYear = rewardPrice.multipliedBy(tokenPB).multipliedBy(BPY)
-    const APY = rewardPerYear.dividedBy(TVL).multipliedBy(100)
-    return APY.toPrecision()
+    const a = parseFloat(rwrd)
+    const b = parseFloat(_tokenPerBlock)
+    const c = parseFloat("1576800")
+    const d = parseFloat(_poolTVL)
+
+    // const rewardPerYear = rewardPrice.multipliedBy(tokenPB).multipliedBy(BPY)
+    // const APY = rewardPerYear.dividedBy(TVL).multipliedBy(100)
+
+    const rewardPerYear = a * b * c
+    const APY = (rewardPerYear / d) * 100
+
+    return APY.toString()
 }
 
 
@@ -449,7 +452,6 @@ const fetchTokenData = async (_token) => {
 
 
         let singleToken;
-        console.log(tokenPriceData)
         if (tokenPriceData.token0.address.toLowerCase() == _token.toLowerCase()) {
             BigNumber.config({ EXPONENTIAL_AT: 10 })
             const maticPrice = tokenPriceData.DerivedMaticPrice

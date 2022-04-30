@@ -13,7 +13,8 @@ const pools = [
         tokenEarnName: "COB",
         tokenEarnLogoName: "cornlogo",
         multiplier: "50x",
-        depositFee: "0.1%"
+        depositFee: "0.1%",
+        cobPerBlock: "2.24"
     
     },
     {   
@@ -30,7 +31,8 @@ const pools = [
         tokenEarnName: "COB",
         tokenEarnLogoName: "cornlogo",
         multiplier: "50x",
-        depositFee: "0.1%"
+        depositFee: "0.1%",
+        cobPerBlock: "2.24"
     
     },
     {   pid: 2,
@@ -46,7 +48,8 @@ const pools = [
         tokenEarnName: "COB",
         tokenEarnLogoName: "cornlogo",
         multiplier: "50x",
-        depositFee: "0.1%"
+        depositFee: "0.1%",
+        cobPerBlock: "2.24"
     
     },
     {
@@ -63,7 +66,8 @@ const pools = [
         tokenEarnName: "COB",
         tokenEarnLogoName: "cornlogo",
         multiplier: "50x",
-        depositFee: "0.1%"
+        depositFee: "0.1%",
+        cobPerBlock: "2.24"
     },
     {
       pid: 4,
@@ -79,7 +83,8 @@ const pools = [
       tokenEarnName: "COB",
       tokenEarnLogoName: "cornlogo",
       multiplier: "50x",
-      depositFee: "0.1%"
+      depositFee: "0.1%",
+      cobPerBlock: "2.24"
     },
     {
     pid: 5,
@@ -95,7 +100,9 @@ const pools = [
     tokenEarnName: "COB",
     tokenEarnLogoName: "cornlogo",
     multiplier: "50x",
-    depositFee: "0.1%"
+    depositFee: "0.1%",
+    cobPerBlock: "2.24"
+    
     },
     {
     pid: 6,
@@ -111,7 +118,9 @@ const pools = [
     tokenEarnName: "COB",
     tokenEarnLogoName: "cornlogo",
     multiplier: "50x",
-    depositFee: "0.1%"
+    depositFee: "0.1%",
+    cobPerBlock: "2.24"
+    
     },
     {
     pid: 7,
@@ -127,7 +136,9 @@ const pools = [
     tokenEarnName: "COB",
     tokenEarnLogoName: "cornlogo",
     multiplier: "50x",
-    depositFee: "0.1%"
+    depositFee: "0.1%",
+    cobPerBlock: "2.24"
+    
     },
     {
     pid: 8,
@@ -137,13 +148,15 @@ const pools = [
     tokenStakeName: "LINK",
     tokenBaseAddress: "0x53E0bca35eC356BD5ddDFebbD1Fc0fD03FaBad39",
     poolurl: "https://info.quickswap.exchange/#/pair/0x5ca6ca6c3709e1e6cfe74a50cf6b2b6ba2dadd67",
-    imageurl: "https://polygonscan.com/token/images/chainlinktoken_32.png?v=6",
+    imageurl: "https://uc69eb2fca8c87c26b80bbb07240.previews.dropboxusercontent.com/p/thumb/ABi5iEuouf29syzxXwlwkIwDrGEAdxSngFjWEKaxjwYz86wK92NhV0ZEXCIIpeBuS4ohPmiXRw4IChR5bx2VPB25j_s8UjC7nAbkkEt4-xm2nBUoMDILCUNVoh3iJtA-kKpJndzefDeIOKjVUD1aXo7iPPeSepOCuJi3O74ePuTu4uHppaHgA5xOspECT8UykhIJ7Idb7fm_5c8vukhFw-Zx7XAWv8uWEaCRnBzdP6cyyczPXiTmxXePPWveT7kiIc3ucVh-6z17dyAZIQT27xK3XzJl_vP-f8O8KLvORM9rXyb80QSFRj7cOZcO7qZ-4jMU38vNkf5gG2k3ueIPywUn03IvcX5SmD5IOqX5XR4vqY6beZ8vLg7iToAC0akTKJxJi7PmJ0j3o_C0sz-1ERUcmfqTYhKhcehtFMYOE1GPHw/p.png",
     tokenEarnAddress: "0x67455aE73441AaBC4A2f22Fa7084cB215b4cDC15",
     display: true,
     tokenEarnName: "COB",
     tokenEarnLogoName: "cornlogo",
     multiplier: "50x",
-    depositFee: "0.1%"
+    depositFee: "0.1%",
+    cobPerBlock: "2.24"
+    
     },
     {
     pid: 9,
@@ -159,7 +172,9 @@ const pools = [
     tokenEarnName: "COB",
     tokenEarnLogoName: "cornlogo",
     multiplier: "50x",
-    depositFee: "0.1%"
+    depositFee: "0.1%",
+    cobPerBlock: "2.24"
+    
     },
     {
     pid: 10,
@@ -175,7 +190,9 @@ const pools = [
     tokenEarnName: "COB",
     tokenEarnLogoName: "cornlogo",
     multiplier: "50x",
-    depositFee: "0.1%"
+    depositFee: "0.1%",
+    cobPerBlock: "2.24"
+    
     },
     {
     pid: 11,
@@ -191,7 +208,9 @@ const pools = [
     tokenEarnName: "COB",
     tokenEarnLogoName: "cornlogo",
     multiplier: "50x",
-    depositFee: "0.1%"
+    depositFee: "0.1%",
+    cobPerBlock: "2.24"
+    
     },
     {
     pid: 12,
@@ -207,7 +226,9 @@ const pools = [
     tokenEarnName: "COB",
     tokenEarnLogoName: "cornlogo",
     multiplier: "50x",
-    depositFee: "0.1%"
+    depositFee: "0.1%",
+    cobPerBlock: "2.24"
+    
     },
     {
     pid: 13,
@@ -223,7 +244,9 @@ const pools = [
     tokenEarnName: "COB",
     tokenEarnLogoName: "cornlogo",
     multiplier: "100x",
-    depositFee: "0%"
+    depositFee: "0%",
+    cobPerBlock: "2.24"
+    
     },
     {
         pid: 14,
@@ -239,7 +262,9 @@ const pools = [
         tokenEarnName: "COB",
         tokenEarnLogoName: "cornlogo",
         multiplier: "100x",
-        depositFee: "0.1%"
+        depositFee: "0.1%",
+        cobPerBlock: "2.24"
+    
         },
     {
       pid: 15,
@@ -255,7 +280,9 @@ const pools = [
       tokenEarnName: "COB",
       tokenEarnLogoName: "cornlogo",
       multiplier: "100x",
-      depositFee: "0%"
+      depositFee: "0%",
+      cobPerBlock: "2.24"
+    
       },
 ]
 
