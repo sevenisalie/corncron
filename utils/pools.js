@@ -284,6 +284,24 @@ const pools = [
       cobPerBlock: "2.24"
     
       },
+      {
+        pid: 16,
+        LP: true,
+        tokenStakeAddress: "0xec212A46CA0F5eAd7DEB5B3d2A87D6A077e02D60",
+        tokenStakeName: "COB-WMATIC",
+        tokenBaseAddress: "0xec212A46CA0F5eAd7DEB5B3d2A87D6A077e02D60",
+        decimals: 18,
+        poolurl: "https://info.quickswap.exchange/#/pair/0xadbf1854e5883eb8aa7baf50705338739e558e5b",
+        imageurl: "https://i.imgur.com/jRLR7s8.png",
+        tokenEarnAddress: "0x78229c16A0913Da0CC2C33eEC7E76461d96269Fa",
+        display: true,
+        tokenEarnName: "COB",
+        tokenEarnLogoName: "cornlogo",
+        multiplier: "200x",
+        depositFee: "0%",
+        cobPerBlock: "2.24"
+      
+        },
 ]
 
 module.exports = {
