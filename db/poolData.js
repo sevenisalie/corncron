@@ -1,7 +1,11 @@
+const express = require("express")
+const router = express.Router()
 const {addresses} = require("../utils/addresses.js")
 const {pools} = require("../utils/pools")
 const {ethers} = require("ethers")
-
+const axios = require("axios")
+const {resolveCalls}  = require("../utils/multiCalls")
+const {Contract} = require("ethers-multicall")
 
 const BigNumber = require("bignumber.js");
 const { ERC20Abi, UniPairAbi, quickSwapFactoryAbi } = require("../utils/abi.js")
@@ -20,6 +24,7 @@ const fetchSigner = async () => {
     const wallet = new ethers.Wallet(process.env.PRIVATE_KEY);
     
     const signer = wallet.connect(provider);
+    console.log(`connected to ${signer.address}`);
     
     return signer;
 };
@@ -32,6 +37,11 @@ const fetchContract = async (address, abi) => {
     return contract;
 };
 
+const fetchMultiCallContract = async (address, abi) => {
+    const contract = new Contract(address, abi)
+    return contract
+}
+
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 // $$$$$$$$$ HELPERS $$$$$$$$$$$$$$$$$$
 // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -39,7 +49,8 @@ const fetchContract = async (address, abi) => {
 const fetchBestLP = async (_token) => {
     try {
         const data = await fetchTokenLiquidityInfo(_token)
-
+        console.log("DARATA")
+        console.log(data)
         const nativeTokenLiquidity = data.map( (pool) => {
         const token0 = pool.token0
         const token1 = pool.token1
@@ -89,16 +100,24 @@ const fetchTokenLiquidityInfo = async (_token) => {
   
       const quoteToken = addresses.tokens.MATIC
       
-  
+    //   if (_token.toLowerCase() == quoteToken.toLowerCase()) {
+    //       console.log("both token and quote token are the same")
+    //       return 1
+    //   }
   
       //work it
       const quoteTokenMap = WHITELIST.map( async (quoteToken) => {
           const pairAddress = await factoryctr.getPair(_token, quoteToken)
   
           if (pairAddress.toLowerCase() !== addresses.ZERO_ADDRESS.toLowerCase()) {
-              const pairctr = await fetchContract(pairAddress, UniPairAbi)
-              const token0 = await pairctr.token0()
-              const token1 = await pairctr.token1()
+              const pairctr = await fetchMultiCallContract(pairAddress, UniPairAbi)
+              const _token0 = await pairctr.token0()
+              const _token1 = await pairctr.token1()
+
+              const [
+                  token0,
+                  token1
+              ] = await resolveCalls([_token0, _token1])
   
     
               if (_token.toLowerCase() == token0.toLowerCase()) {
@@ -137,12 +156,13 @@ const fetchTokenLiquidityInfo = async (_token) => {
           return item !== undefined
       })
   
-
+      console.log("DARTA")
+      console.log(data)
       return data
 }
 
 const fetchLPInfo = async (LPTokenAddress) => {
-    const lpctr = await fetchContract(LPTokenAddress, UniPairAbi)
+    const lpctr = await fetchMultiCallContract(LPTokenAddress, UniPairAbi)
     
 
     const _token0 =  lpctr.token0()
@@ -156,10 +176,10 @@ const fetchLPInfo = async (LPTokenAddress) => {
         token1,
         reserves,
         totalSupply
-    ] = await Promise.all(batch1)
+    ] = await resolveCalls(batch1)
 
-    const _token0ctr = await fetchContract(token0, ERC20Abi)
-    const _token1ctr = await fetchContract(token1, ERC20Abi)
+    const _token0ctr = await fetchMultiCallContract(token0, ERC20Abi)
+    const _token1ctr = await fetchMultiCallContract(token1, ERC20Abi)
 
     const _token0Decimals =  _token0ctr.decimals()
     const _token0Symbol =  _token0ctr.symbol()
@@ -174,7 +194,7 @@ const fetchLPInfo = async (LPTokenAddress) => {
         token1Decimals,
         token1Symbol
 
-    ] = await Promise.all(batch2)
+    ] = await resolveCalls(batch2)
 
 
 
@@ -224,7 +244,7 @@ const getUSDPriceRatio = async (_token) => {
 
     
     const pairAddress = await factory.getPair(_token, DAI)
-    const lpctr = await fetchContract(pairAddress, UniPairAbi)
+    const lpctr = await fetchMultiCallContract(pairAddress, UniPairAbi)
     const tokens = [_token, DAI]
     
 
@@ -237,10 +257,10 @@ const getUSDPriceRatio = async (_token) => {
         token0,
         token1,
         reserves
-    ] = await Promise.all(batch1)
+    ] = await resolveCalls(batch1)
 
-    const _token0ctr = await fetchContract(token0, ERC20Abi)
-    const _token1ctr = await fetchContract(token1, ERC20Abi)
+    const _token0ctr = await fetchMultiCallContract(token0, ERC20Abi)
+    const _token1ctr = await fetchMultiCallContract(token1, ERC20Abi)
 
     const _token0Decimals =  _token0ctr.decimals()
     const _token0Symbol =  _token0ctr.symbol()
@@ -255,7 +275,7 @@ const getUSDPriceRatio = async (_token) => {
         token1Decimals,
         token1Symbol
 
-    ] = await Promise.all(batch2)
+    ] = await resolveCalls(batch2)
     
 
     const token0Reserves = ethers.utils.formatUnits(reserves._reserve0, token0Decimals)
@@ -294,7 +314,14 @@ const getAPY = async (_poolTVL, _tokenPerBlock) => {
 
     const rewardPerYear = a * b * c
     const APY = (rewardPerYear / d) * 100
-
+    console.log("DALE")
+    console.log(a)
+    console.log(b)
+    console.log(c)
+    console.log(d)
+    console.log(rewardPerYear)
+    console.log(APY.toString())
+    console.log("GRIBBLE")
     return APY.toString()
 }
 
@@ -317,35 +344,47 @@ const fetchLPData = async (_token) => {
     }
 
     const _rewardTokenPerBlock = POOL[0].cobPerBlock
-    const pairctr = await fetchContract(_token, UniPairAbi)
+    const pairctr = await fetchMultiCallContract(_token, UniPairAbi)
+
+    const _pairInfo =  pairctr.totalSupply()
+    const _token0 =  pairctr.token0()
+    const _token1 =  pairctr.token1()
+
+    const [
+        pairInfo,
+        token0,
+        token1
+    ] = await resolveCalls([_pairInfo, _token0, _token1])
 
 
-    const pairInfo = await pairctr.totalSupply()
-    const token0 = await pairctr.token0()
-    const token1 = await pairctr.token1()
+    const token0ctr = await fetchMultiCallContract(token0, ERC20Abi)
+    const token1ctr = await fetchMultiCallContract(token1, ERC20Abi)
 
+    const _LPBalance0 =  token0ctr.balanceOf(_token)
+    const _LPBalance1 =  token1ctr.balanceOf(_token)
 
-    const token0ctr = await fetchContract(token0, ERC20Abi)
-    const token1ctr = await fetchContract(token1, ERC20Abi)
+    const _sym0 =  token0ctr.symbol()
+    const _dec0 =  token0ctr.decimals()
 
-    const LPBalance0 = await token0ctr.balanceOf(_token)
-    const LPBalance1 = await token1ctr.balanceOf(_token)
-
-    const sym0 = await token0ctr.symbol()
-    const dec0 = await token0ctr.decimals()
-
-    const sym1 = await token1ctr.symbol()
-    const dec1 = await token1ctr.decimals()
-
-    const _symbol = `${sym0} - ${sym1}`
-
+    const _sym1 =  token1ctr.symbol()
+    const _dec1 =  token1ctr.decimals()
 
     const bestLP0 = await fetchBestLP(token0)
     const bestLP1 = await fetchBestLP(token1)
-    const rawTVL = await pairctr.balanceOf(addresses.CHEF.masterChef)
+    const _rawTVL =  pairctr.balanceOf(addresses.CHEF.masterChef)
+
+    const [
+        LPBalance0,
+        LPBalance1,
+        sym0,
+        dec0,
+        sym1,
+        dec1,
+        rawTVL
+    ] = await resolveCalls([_LPBalance0, _LPBalance1, _sym0, _dec0, _sym1, _dec1, _rawTVL])
     const poolTotalStaked = ethers.utils.formatUnits(rawTVL, 18)
 
-
+    const _symbol = `${sym0} - ${sym1}`
 
     //incoming Math
     const formattedLPB0 = ethers.utils.formatUnits(LPBalance0, dec0)
@@ -439,19 +478,28 @@ const fetchTokenData = async (_token) => {
         }
         
         // Act I the token
-        const tokenctr = await fetchContract(_token, ERC20Abi)
+        const tokenctr = await fetchMultiCallContract(_token, ERC20Abi)
         const tokenPriceData = await fetchBestLP(_token)
 
-        const decimals = await tokenctr.decimals()
-        const symbol = await tokenctr.symbol()
-        const totalSupply = await tokenctr.totalSupply()
-        const formattedTotalSupply = ethers.utils.formatUnits(totalSupply, decimals)
-        const rawTVL = await tokenctr.balanceOf(addresses.CHEF.masterChef)
+        const _decimals =  tokenctr.decimals()
+        const _symbol =  tokenctr.symbol()
+        const _totalSupply =  tokenctr.totalSupply()
+        const _rawTVL =  tokenctr.balanceOf(addresses.CHEF.masterChef)
+
+        const [
+            decimals,
+            symbol,
+            totalSupply,
+            rawTVL
+        ] = await resolveCalls([_decimals, _symbol, _totalSupply, _rawTVL])
+
         const poolTotalStaked = ethers.utils.formatUnits(rawTVL, decimals)
+        const formattedTotalSupply = ethers.utils.formatUnits(totalSupply, decimals)
 
 
 
         let singleToken;
+        console.log(tokenPriceData)
         if (tokenPriceData.token0.address.toLowerCase() == _token.toLowerCase()) {
             BigNumber.config({ EXPONENTIAL_AT: 10 })
             const maticPrice = tokenPriceData.DerivedMaticPrice
@@ -521,29 +569,21 @@ const fetchTokenData = async (_token) => {
 }
 
 const fetchAllPoolApyData = async () => {
-
-    try {
-        const poolAPYPromises = pools.map( (pool) => {
-            if (pool.LP === true) {
-                const call = fetchLPData(pool.tokenStakeAddress)
-                return call
-            }
-            if (pool.LP !== true)  {
-                const call = fetchTokenData(pool.tokenStakeAddress)
-                return call
-            }
-        })
     
-        const data = await Promise.all(poolAPYPromises)
-       
-        return data
+    const poolAPYPromises = pools.map( (pool) => {
+        if (pool.LP === true) {
+            const call = fetchLPData(pool.tokenStakeAddress)
+            return call
+        }
+        if (pool.LP !== true)  {
+            const call = fetchTokenData(pool.tokenStakeAddress)
+            return call
+        }
+    })
 
-        
-    } catch (err) {
-        console.log(err)
-    }
-    
-
+    const data = await Promise.all(poolAPYPromises)
+   
+    return data
 }
 
 

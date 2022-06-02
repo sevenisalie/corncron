@@ -1,3 +1,5 @@
+const express = require("express")
+const router = express.Router()
 const mongoose = require("mongoose")
 const axios = require("axios")
 const {fetchAllPoolApyData} = require("./poolData")
@@ -7,8 +9,6 @@ const URI = process.env.MONGODB_URI
 mongoose.connect(URI)
 
 const dataSchema  = new mongoose.Schema({
-    
-
     pid: {type: Number},
     symbol: {type: String},
     poolStakedAmount: {type: String},
@@ -35,7 +35,6 @@ const createEntry = async (data) => {
         const entry = new Pools(
             {
                 POOLS: data
-               
             }
         )
 
@@ -50,6 +49,7 @@ const createEntry = async (data) => {
 const writeAllPoolData = async () => {
     try {
         const data = await fetchAllPoolApyData()
+
         const justPoolData= data.map( (pool) => {
             return pool.POOL
         })
@@ -66,10 +66,21 @@ try {
     } catch (err) {console.log(err)}
 }
 
-
+const poolDataRouter = router.get('/', async (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    try {
+        const data = await readLatestPoolData()
+        res.json(data)
+    } catch (err) {
+        res.status(500)
+        res.json(err)
+    }
+})
 
 
 module.exports = {
+    poolDataRouter,
     writeAllPoolData,
     readLatestPoolData
 }

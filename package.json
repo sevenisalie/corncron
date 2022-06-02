@@ -11,7 +11,7 @@
     "bignumber.js": "^9.0.2",
     "dotenv": "^16.0.0",
     "ethers": "^5.6.4",
-    "ethers-multicall": "https://github.com/Limited-Liability-Developers/ethers-multicall.git",
+    "ethers-multicall": "^0.2.3",
     "express": "^4.17.3",
     "mongoose": "^6.3.1",
     "node-cron": "^3.0.0"
